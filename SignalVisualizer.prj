@@ -1,6 +1,6 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
   <configuration build-checksum="3688640983" file="C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp\SignalVisualizer.prj" location="C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp" name="SignalVisualizer" preferred-package-location="C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp\SignalVisualizer\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
-    <param.appname>SignalVisualizer</param.appname>
+    <param.appname>Signal Visualizer</param.appname>
     <param.icon />
     <param.icons />
     <param.version>1.0</param.version>
@@ -11,7 +11,7 @@
     <param.description />
     <param.screenshot />
     <param.guid />
-    <param.installpath.string>\Aholab\SignalVisualizer\</param.installpath.string>
+    <param.installpath.string>\Aholab\Signal Visualizer\</param.installpath.string>
     <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
     <param.logo />
     <param.install.notes />
@@ -93,7 +93,7 @@
       <file>${PROJECT_ROOT}\visualization_App.mlapp</file>
     </fileset.depfun>
     <build-deliverables>
-      <file location="${PROJECT_ROOT}\SignalVisualizer\for_testing" name="SignalVisualizer.exe" optional="false">C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp\SignalVisualizer\for_testing\SignalVisualizer.exe</file>
+      <file location="${PROJECT_ROOT}\SignalVisualizer\for_testing" name="Signal Visualizer.exe" optional="false">C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp\SignalVisualizer\for_testing\Signal Visualizer.exe</file>
       <file location="${PROJECT_ROOT}\SignalVisualizer\for_testing" name="splash.png" optional="false">C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp\SignalVisualizer\for_testing\splash.png</file>
       <file location="${PROJECT_ROOT}\SignalVisualizer\for_testing" name="readme.txt" optional="true">C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp\SignalVisualizer\for_testing\readme.txt</file>
     </build-deliverables>
