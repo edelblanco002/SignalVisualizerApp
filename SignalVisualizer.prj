@@ -1,6 +1,6 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="3688640983" file="C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp\SignalVisualizer.prj" location="C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp" name="SignalVisualizer" preferred-package-location="C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp\SignalVisualizer\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
-    <param.appname>Signal Visualizer</param.appname>
+  <configuration build-checksum="1460602557" file="C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp\SignalVisualizer.prj" location="C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp" name="SignalVisualizer" preferred-package-location="C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp\SignalVisualizer\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+    <param.appname>SignalVisualizer</param.appname>
     <param.icon />
     <param.icons />
     <param.version>1.0</param.version>
@@ -11,7 +11,7 @@
     <param.description />
     <param.screenshot />
     <param.guid />
-    <param.installpath.string>\Aholab\Signal Visualizer\</param.installpath.string>
+    <param.installpath.string>\Aholab\SignalVisualizer\</param.installpath.string>
     <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
     <param.logo />
     <param.install.notes />
@@ -24,15 +24,15 @@
     <param.user.defined.mcr.options />
     <param.target.type>subtarget.standalone</param.target.type>
     <param.support.packages />
-    <param.web.mcr>true</param.web.mcr>
-    <param.package.mcr>false</param.package.mcr>
+    <param.web.mcr>false</param.web.mcr>
+    <param.package.mcr>true</param.package.mcr>
     <param.no.mcr>false</param.no.mcr>
     <param.web.mcr.name>MyAppInstaller_web</param.web.mcr.name>
     <param.package.mcr.name>MyAppInstaller_mcr</param.package.mcr.name>
     <param.no.mcr.name>MyAppInstaller_app</param.no.mcr.name>
     <param.windows.command.prompt>true</param.windows.command.prompt>
     <param.create.log>false</param.create.log>
-    <param.log.file />
+    <param.log.file>SignalVisualizer.log</param.log.file>
     <param.native.matlab>false</param.native.matlab>
     <param.checkbox>false</param.checkbox>
     <param.example />
@@ -63,15 +63,12 @@
       <param.user.defined.mcr.options />
       <param.target.type />
       <param.support.packages />
-      <param.web.mcr />
-      <param.package.mcr />
       <param.no.mcr />
       <param.web.mcr.name />
       <param.package.mcr.name />
       <param.no.mcr.name />
       <param.windows.command.prompt />
       <param.create.log />
-      <param.log.file />
       <param.native.matlab />
       <param.checkbox />
       <param.example />
@@ -79,34 +76,60 @@
     <fileset.main>
       <file>${PROJECT_ROOT}\SignalVisualizer.mlapp</file>
     </fileset.main>
-    <fileset.resources />
-    <fileset.package />
+    <fileset.resources>
+      <file>${PROJECT_ROOT}\User help\en\Userhelp.html</file>
+    </fileset.resources>
+    <fileset.package>
+      <file>${PROJECT_ROOT}\User help</file>
+    </fileset.package>
     <fileset.depfun>
+      <file>${PROJECT_ROOT}\down.png</file>
       <file>${PROJECT_ROOT}\harmonics_synthesis_App.mlapp</file>
+      <file>${PROJECT_ROOT}\info.png</file>
       <file>${PROJECT_ROOT}\lang_ind.mat</file>
       <file>${PROJECT_ROOT}\language.mat</file>
+      <file>${PROJECT_ROOT}\left.png</file>
+      <file>${PROJECT_ROOT}\load_App.mlapp</file>
       <file>${PROJECT_ROOT}\noise_app.mlapp</file>
+      <file>${PROJECT_ROOT}\play_button.png</file>
+      <file>${PROJECT_ROOT}\playSegment_button.png</file>
+      <file>${PROJECT_ROOT}\record_App.mlapp</file>
+      <file>${PROJECT_ROOT}\record_button.png</file>
+      <file>${PROJECT_ROOT}\right.png</file>
       <file>${PROJECT_ROOT}\rosenberg_App.mlapp</file>
       <file>${PROJECT_ROOT}\sawtooth_App.mlapp</file>
       <file>${PROJECT_ROOT}\square_App.mlapp</file>
+      <file>${PROJECT_ROOT}\stop_button.png</file>
       <file>${PROJECT_ROOT}\tone_App.mlapp</file>
+      <file>${PROJECT_ROOT}\up.png</file>
       <file>${PROJECT_ROOT}\visualization_App.mlapp</file>
+      <file>${PROJECT_ROOT}\zoomcenter.png</file>
+      <file>${PROJECT_ROOT}\zoomdown.png</file>
+      <file>${PROJECT_ROOT}\zoomleft.png</file>
+      <file>${PROJECT_ROOT}\zoomright.png</file>
+      <file>${PROJECT_ROOT}\zoomup.png</file>
     </fileset.depfun>
     <build-deliverables>
-      <file location="${PROJECT_ROOT}\SignalVisualizer\for_testing" name="Signal Visualizer.exe" optional="false">C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp\SignalVisualizer\for_testing\Signal Visualizer.exe</file>
+      <file location="${PROJECT_ROOT}\SignalVisualizer\for_testing" name="SignalVisualizer.exe" optional="false">C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp\SignalVisualizer\for_testing\SignalVisualizer.exe</file>
       <file location="${PROJECT_ROOT}\SignalVisualizer\for_testing" name="splash.png" optional="false">C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp\SignalVisualizer\for_testing\splash.png</file>
       <file location="${PROJECT_ROOT}\SignalVisualizer\for_testing" name="readme.txt" optional="true">C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp\SignalVisualizer\for_testing\readme.txt</file>
     </build-deliverables>
     <workflow />
     <matlab>
-      <root>C:\Program Files\MATLAB\R2019b</root>
+      <root>C:\Program Files\MATLAB\R2020a</root>
       <toolboxes>
         <toolbox name="matlabcoder" />
+        <toolbox name="embeddedcoder" />
       </toolboxes>
       <toolbox>
         <matlabcoder>
           <enabled>true</enabled>
         </matlabcoder>
+      </toolbox>
+      <toolbox>
+        <embeddedcoder>
+          <enabled>true</enabled>
+        </embeddedcoder>
       </toolbox>
     </matlab>
     <platform>
