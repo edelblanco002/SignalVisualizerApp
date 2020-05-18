@@ -102,6 +102,7 @@
       <file>${PROJECT_ROOT}\harmonics_synthesis_App.mlapp</file>
       <file>${PROJECT_ROOT}\helpApp.mlapp</file>
       <file>${PROJECT_ROOT}\info.png</file>
+      <file>${PROJECT_ROOT}\info_App.mlapp</file>
       <file>${PROJECT_ROOT}\language.mat</file>
       <file>${PROJECT_ROOT}\left.png</file>
       <file>${PROJECT_ROOT}\load_App.mlapp</file>
