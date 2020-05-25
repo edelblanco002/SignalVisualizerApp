@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0109)file:///C:/Users/Eder/Documents/MATLAB/SignalVisualizerApp/Help%20files/es/Generar%20ruido/Generatenoise.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Generate noise</title>
+    <style>
+	body {
+	    background-color: #ffffff;
+            padding: 0pt 0pt 0pt 20pt;
+	}
+	
+	h1 {
+	    color: #2a3d1b;
+	    font-weight: bold;
+	    text-decoration: none;
+	    vertical-align: baseline;
+	    font-size: 24pt;
+	    font-family: "Arial Rounded MT";
+	    font-style: normal;
+	}
+	h2 {
+	    padding-top: 24pt;
+	    padding-bottom: 0pt;
+	    line-height: 1.3;
+	    text-align: justify;
+	    padding-top: 24pt;
+	    color: #4c5b29;
+	    font-size: 14pt;
+	    padding-bottom: 0pt;
+	    font-family: "Arial Rounded MT";
+	    line-height: 1.3;
+	    text-align: justify;
+	    font-size: 1.5em;
+	    font-weight: bold;
+	}
+	p,li {
+	    padding-top: 10pt;
+	    padding-bottom: 0pt;
+	    line-height: 1.3;
+	    text-align: justify;	
+	    margin: 0;
+	    color: #666666;
+	    font-size: 11pt;
+	    font-family: "Droid Serif";
+	}
+	td {
+	    text-align:center;
+	    font-style:italic;
+	}
+	.formula {
+	    font-size: 15pt;
+	    font-style: italic;
+	    padding-top: 10pt;
+	    padding-bottom: 0pt;
+	    line-height: 1.3;
+	    text-align: center;
+	}
+    </style>
+</head>
+<body>
+    <h1>Generar ruido</h1>
+    <p>Este módulo permite generar diferentes <a href="file:///C:/Users/Eder/Documents/MATLAB/SignalVisualizerApp/Help%20files/es/Generar%20ruido/Generatenoise.html#type">tipos de ruido</a> de un segundo de duración, con la posibilidad de modificar la <a href="file:///C:/Users/Eder/Documents/MATLAB/SignalVisualizerApp/Help%20files/es/Generar%20ruido/Generatenoise.html#amplitude">amplitud máxima</a>.</p>
+    <h2>Interfaz</h2>
+    <img src="./Generarruido_files/image1.png" alt="Generate pure noise interface" style="width: 602.00px; height: 464.00px; margin-left: 0.00px; margin-top: 0.00px;">
+    <ol>
+        <li><b>Ventana de previsualización:</b> Permite ver la señal que generará el módulo. Se actualiza al cambiar el valor de algún parámetro.</li>
+        <li><b>Selector de tipo de ruido:</b> Permite seleccionar el <a href="#type">tipo de ruido</a> generado.</li>
+        <li><b>Selector de amplitud máxima:</b>Permite seleccionar la <a href="#amplitude">amplitud máxima</a> del ruido generado.</li>
+        <li><b>Botón “Nueva muestra”:</b> Genera una nueva muestra aleatoria de ruido.</li>
+        <li><b>Botón "Generar":</b> Abre una nueva ventana de visualización para observar una señal con los parámetros seleccionados, de 1 segundo de duración.</li>
+    </ol>
+    <h2>Ruido</h2>
+    <p>Se define como ruido una señal formada por muestras cuyo valor es aleatorio.</p>
+    <ul>
+        <li>
+            <b id="amplitude">Amplitud máxima:</b> Rango numérico dentro del que se encontrarán los valores de la muestra.<br>Por ejemplo, si se selecciona una amplitud máxima de valor 0.5, el valor de cada muestra será un número aleatorio entre -0.5 y 0.5.</li>
+        <li>
+            <b id="type">Tipo de ruido</b> Existen diferentes tipos de ruido, en función de su densidad de potencia espectral.<ul>
+                <li>
+                    <b>Ruido blanco:</b> Este tipo de ruido tiene una densidad de potencia espectral plana y uniforme a lo largo de todo todo el rango frecuencial. Esto quiere decir que tiene la misma potencia espectral en todas las frecuencias, y que las muestras están incorreladas entre sí. Es decir, el valor de cada muestra es independiente del valor de todas las demás muestras.</li>
+                <li>
+                    <b>Ruido rosa:</b> La densidad de potencia espectral de este ruido es inversamente proporcional a la frecuencia. Esto quiere decir que este ruido tiene mayor potencia espectral en las frecuencias graves, y menor en las agudas.</li>
+                <li>
+                    <b>Ruido marrón:</b> Su densidad de potencia espectral es inversamente proporcional a la frecuencia, al igual que ocurre con el ruido rosa. La diferencia con el tipo de ruido anterior es que la potencia espectral en las frecuencias agudas es 0.</li>
+
+            </ul>
+        </li>
+    </ul>
+
+</body></html>
