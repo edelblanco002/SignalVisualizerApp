@@ -65,7 +65,7 @@
 <body>
     <h1>Visualization window</h1>
     <p>
-        This window allows to analyze the spectrum of the chosen signal by different methods: Fourier Transform, Short Time Fourier Transform and spectrogram.
+        This window allows to analyze the spectrum of the chosen signal by different methods: <a href="#fourier_transform">Fourier Transform</a>, <a href="#stft">Short Time Fourier Transform</a> and <a href="#spectrogram">spectrogram</a>.
     </p>
     <h2>Interface</h2>
     <p><b>Fourier Transform</b></p><br />
@@ -163,7 +163,7 @@
     </p>
     <img alt="Spectrogram interface" src="images/image7.png" style="width: 602.00px; height: 352.00px; margin-left: 0.00px; margin-top: 0.00px;">
 
-    <p><b>STFT + Espectrograma</b></p>
+    <p><b>STFT + Spectrogram</b></p>
 
     <p>
         It allows to observe the <a href="#stft">STFT</a> of the signal and to see its position in the <a href="#spectrogram">spectrogram</a>. <br /><br />
@@ -176,7 +176,7 @@
     <img src="images/ft_formula.png" alt="TF formula" style="margin-left: 100pt" />
     <p>
         Where <i>f(t)</i> is a signal in the time domain and where <i>ω = 2𝜋f</i>. <i>F(ω)</i> is the obtained Fourier Transform.
-
+        <br /><br />
         In this case, the audio signal is not a continuous signal, but a discrete signal, in other words, formed by a set of samples. So it’s actually performing a Discrete Fourier Transform, which is mathematically defined as follows:
     </p>
     <img src="images/dft_formula.png" alt="DTF formula" style="margin-left: 100pt" />
@@ -219,7 +219,7 @@
     <h2 id="spectrogram">Spectrogram</h2>
     <p>
         Representation that allows to see the frequency development of the audio signal over time. The horizontal axis corresponds to the time axis, the vertical axis to the frequency, and the variation of the power spectral density is represented by a colour gradient.
-
+        <br /><br />
         The spectrogram is calculated by performing several consecutive <a href="#stft">STFTs</a>, scanning with the chosen window.
     </p>
     <img alt="Window scanning" src="images/image11.gif" style="width: 602.00px; height: 452.00px; margin-left: 0.00px; margin-top: 0.00px;">
