@@ -63,7 +63,7 @@
 </head>
 <body>
     <h1>Ventana de visualización</h1>
-    <p>Esta ventana permite analizar el espectro de la señal elegida mediante diferentes métodos: <a href="#fourier_transform">Transformada de Fourier</a>, <a href="#stft">Transformada de Fourier de Tiempo Reducido</a> y <a href="#spectrogram">espectrograma</a>.</p>
+    <p>Esta ventana permite analizar el espectro de la señal elegida mediante diferentes métodos: <a href="#fourier_transform">Transformada de Fourier</a>, <a href="#stft">Transformada de Fourier a Corto Plazo</a> y <a href="#spectrogram">espectrograma</a>.</p>
     <h2>Interfaz</h2>
     <p><b>Transformada de Fourier</b></p><br>
     <img alt="Interfaz transformada de Fourier" src="images/image6.png" style="width: 602.00px; height: 342.67px; margin-left: 0.00px; margin-top: 0.00px;">
@@ -120,7 +120,7 @@
 
     <p><b>STFT</b></p>
 
-    <p>Permite observar la <a href="#stft">Transformada de Fourier de Tiempo Reducido (STFT)</a> de la señal de audio.<br><br>
+    <p>Permite observar la <a href="#stft">Transformada de Fourier a Corto Plazo (STFT)</a> de la señal de audio.<br><br>
     </p>
 
     <img alt="Interfaz STFT" src="images/image10.png" style="width: 602.00px; height: 352.00px; margin-left: 0.00px; margin-top: 0.00px;">
@@ -154,7 +154,7 @@
     <img src="images/dft_formula.png" alt="DTF formula" style="margin-left: 100pt">
     <p>Siendo <i>x[n]</i> la señal de audio, con <i>N</i> muestras, y <i>ω = 2𝜋f</i>. <i>X(ω)</i> es la Transformada Discreta de Fourier obtenida.</p>
 
-    <h2 id="stft">Transformada de Fourier de Tiempo Reducido (STFT)</h2>
+    <h2 id="stft">Transformada de Fourier a Corto Plazo (STFT)</h2>
     <p>Consiste en realizar la <a href="#fourier_transform">Transformada Discreta de Fourier</a> sobre un segmento de la señal, en lugar de sobre la señal completa. Este segmento de la señal se obtiene multiplicando la señal original por una ventana. De esta forma, sólo se tendrán en cuenta las muestras de la señal que queden dentro de la ventana. Los valores de estas muestras se verán modificados por la forma de la ventana (excepto en el caso de la ventana rectangular).</p>
     <table>
         <tbody><tr>
