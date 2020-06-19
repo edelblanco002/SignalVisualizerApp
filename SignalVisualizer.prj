@@ -24,13 +24,13 @@
     <param.user.defined.mcr.options />
     <param.target.type>subtarget.standalone</param.target.type>
     <param.support.packages />
-    <param.web.mcr>false</param.web.mcr>
-    <param.package.mcr>true</param.package.mcr>
+    <param.web.mcr>true</param.web.mcr>
+    <param.package.mcr>false</param.package.mcr>
     <param.no.mcr>false</param.no.mcr>
     <param.web.mcr.name>MyAppInstaller_web</param.web.mcr.name>
     <param.package.mcr.name>MyAppInstaller_mcr</param.package.mcr.name>
     <param.no.mcr.name>MyAppInstaller_app</param.no.mcr.name>
-    <param.windows.command.prompt>true</param.windows.command.prompt>
+    <param.windows.command.prompt>false</param.windows.command.prompt>
     <param.create.log>false</param.create.log>
     <param.log.file />
     <param.native.matlab>false</param.native.matlab>
@@ -65,11 +65,12 @@
       <param.user.defined.mcr.options />
       <param.target.type />
       <param.support.packages />
+      <param.web.mcr />
+      <param.package.mcr />
       <param.no.mcr />
       <param.web.mcr.name />
       <param.package.mcr.name />
       <param.no.mcr.name />
-      <param.windows.command.prompt />
       <param.create.log />
       <param.log.file />
       <param.native.matlab />
@@ -99,6 +100,7 @@
       <file>${PROJECT_ROOT}\control_App.mlapp</file>
       <file>${PROJECT_ROOT}\down.png</file>
       <file>${PROJECT_ROOT}\espectrograma.mat</file>
+      <file>${PROJECT_ROOT}\export.png</file>
       <file>${PROJECT_ROOT}\harmonics_synthesis_App.mlapp</file>
       <file>${PROJECT_ROOT}\helpApp.mlapp</file>
       <file>${PROJECT_ROOT}\info.png</file>
