@@ -67,7 +67,7 @@
     </p>
     <h2>Interfazea</h2>
     <p><b>Fourier Transformatua</b></p><br>
-    <img alt="Fourier transformatuko interfazea" src="images/image10.png" style="width: 602.00px; height: 342.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
+    <img alt="Fourier transformatuko interfazea" src="images/visualization1_eus.png" style="width: 602.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
     <p>Audio seinalearen <a href="#fourier_transform">Fourier Transformatua</a> ikusteko aukera ematen du.</p>
     <ol>
         <li>
@@ -82,22 +82,13 @@
             </ol>
         </li>
         <li>
-            <b>Esportatu irudia:</b> Botoi honetan klik eginez zerrenda zabalgarri bat agertuko da, hiru aukerarekin.<br><br>
-            <img alt="Irudia esportatzeko interfazea" src="images/image9.png" style="width: 32.00px; height: 84.00px; margin-left: 0.00px; margin-top: 0.00px;">
-            <ol type="a">
-                <li>Goiko botoiak irudia gordetzen du.
-</li>
-                <li>Erdiko botoiak irudia bit-mapa gisa kopiatzen du.
-</li>
-                <li>Beheko botoiak irudi bektorial gisa kopiatzen du irudia.
-</li>
-            </ol>
+            <b>Esportatzeko botoia:</b> Seinalea edo espektroa <i>.csv</i> edo <i>.xls</i> fitxategi batera esportatzeko balio du. Seinalea <i>.wav</i> soinu-fitxategi giza gorda ahal da.
         </li>
         <li>
             <b>Seinalearen nabigazio-panela
             </b>
             <br><br>
-            <img alt="Seinale nabigazio-panela" src="images/image6.png" style="width: 208.00px; height: 252.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
+            <img alt="Seinale nabigazio-panela" src="images/image6.png" style="width: 208.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
             <ol type="a">
                 <li>
                     Ardatz bertikalean ikuspegia handitzeko eta murrizteko balio dute.
@@ -114,6 +105,9 @@
             </ol>
         </li>
         <li>
+            <b>Bista aldatzeko botoiak:</b> Ikuspegi bat handitzeko balio du.
+        </li>
+        <li>
             <b>Informazio espektralaren ikuspegia:</b> Hemen ikus daiteke seinalearen informazio espektrala, hautatutako metodoaren bidez lortua.
         </li>
         <li>
@@ -124,13 +118,23 @@
         </li>
     </ol>
 
+    <p><b>Eskuineko botoia:</b> Grafiko baten gainean eskuineko botoiarein klikatzean menu bat agertzen da. Aukera hauek eskaintzen ditu:</p>
+    <ol type="a">
+        <li>
+            Grafikoa irudi giza esportatu.
+        </li>
+        <li>
+            Anplitude-ardatzaren eskala linealaren edo logaritmikoaren artean aldatzeko.
+        </li>
+    </ol>
+
     <p><b>STFT</b></p>
 
     <p>Audio seinalearen <a href="#stft">Denbora Murriztuko Fourierren Transformazioa (STFT)</a> behatzea ahalbidetzen du.<br><br>
     </p>
 
-    <img alt="STFT-ko interfazea" src="images/image13.png" style="width: 602.00px; height: 352.00px; margin-left: 0.00px; margin-top: 0.00px;">
-    <ol start="8">
+    <img alt="STFT-ko interfazea" src="images/visualization2_eus.png" style="width: 602.00px; margin-left: 0.00px; margin-top: 0.00px;">
+    <ol start="10">
         <li>
             <b>Leihoa:</b> STFT kalkulatzeko erabiltzen den leihoa. Posizioa alda daiteke seinalearen gainean klik eginez.
         </li>
@@ -146,12 +150,12 @@
     <p><b>Espectrograma</b></p>
     <p>Seinalearen <a href="#spectrogram">espectrograma</a> ikustea ahalbidetzen du.<br><br>
     </p>
-    <img alt="Espektrogramako interfazea" src="images/image5.png" style="width: 602.00px; height: 352.00px; margin-left: 0.00px; margin-top: 0.00px;">
+    <img alt="Espektrogramako interfazea" src="images/visualization3_eus.png" style="width: 602.00px; margin-left: 0.00px; margin-top: 0.00px;">
     <p><b>STFT + Espectrograma</b></p>
 
-    <p>Seinalearen <a href="#stft">STFT</a> behatzea eta <a href="#spectrogram">espectrograman</a>duen posizioa ikustea ahalbidetzen du.<br><br>
+    <p>Seinalearen <a href="#stft">STFT</a> behatzea eta <a href="#spectrogram">espectrograman</a> duen posizioa ikustea ahalbidetzen du.<br><br>
     </p>
-    <img alt="STFT + espektrogramako interfazea" src="images/image11.png" style="width: 602.00px; height: 352.00px; margin-left: 0.00px; margin-top: 0.00px;">
+    <img alt="STFT + espektrogramako interfazea" src="images/visualization4_eus.png" style="width: 602.00px; margin-left: 0.00px; margin-top: 0.00px;">
     <h2 id="fourier_transform">Fourier Transformatua</h2>
     <p>Fourierren Transformatua denboraren domeinuan dauden seinaleak (kasu honetan audio seinalea) frekuentziaren domeinura eraldatzeko erabiltzen den transformazio matematiko bat da. Emaitzak seinalearen maiztasun-edukia erakusten du. Laburbilduz, seinale bat frekuentzia desberdineko tonu puruetan deskonposatzeko hurbilketa bat da.</p>
     <img src="images/ft_formula.png" alt="TF formula" style="margin-left: 100pt">

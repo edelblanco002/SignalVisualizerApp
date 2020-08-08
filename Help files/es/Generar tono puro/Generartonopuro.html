@@ -57,77 +57,109 @@
 	}
     </style>
 </head>
-<body>
-    <h1>Generar tono puro</h1>
-    <p>Este módulo permite un <a href="#pure_tone">tono puro</a> de un segundo de duración, con la posibilidad de variar su <a href="#amplitude">amplitud</a>, <a href="#frequency">frecuencia</a> and <a href="#phase">fase</a>.</p>
+                                                     <body>
+                                                         <h1>Generar tono puro</h1>
+                                                         <p>Este módulo permite generar un <a href="#pure_tone">tono puro</a>, con la posibilidad de variar su <a href="#amplitude">amplitud</a>, <a href="#frequency">frecuencia</a>, <a href="#phase">fase</a> y <a href="#offset">offset</a>.</p>
 
-    <h2>Interfaz</h2>
-    <img alt="Interfaz generar tono puro" src="images/image3.png" style="width: 602.00px; height: 413.33px; margin-left: 0.00px; margin-top: 0.00px;">
-    <ol>
-        <li>
-            <b>Ventana de previsualización:</b> Permite ver la señal que generará el módulo. Se actualiza al cambiar el valor de algún parámetro.</li>
-        <li>
-            <b>Selector de amplitud:</b> Permite variar la <a href="#amplitude">amplitud</a> del coseno entre 0 y 1. El valor se puede cambiar deslizando el cursor o modificando el valor de la caja de texto.</li>
-        <li>
-            <b>Selector de frecuencia:</b> Permite variar la <a href="#frequency">frecuencia</a> del coseno entre 1 y 20000 Hz. El valor se puede cambiar deslizando el cursor o modificando el valor de la caja de texto.</li>
-        <li>
-            <b>Selector de fase:</b> Permite variar la <a href="#phase">fase</a> del coseno entre −π y π radianes. El valor se puede cambiar deslizando el cursor o modificando el valor de la caja de texto.</li>
-        <li>
-            <b>Botón "Generar":</b> Abre una nueva ventana de visualización para observar una señal con los parámetros seleccionados, de 1 segundo de duración.</li>
-        <li>
-            <b>Expresión:</b> Muestra la expresión matemática de la señal con los parámetros seleccionados. Se actualiza al cambiar el valor de algún parámetro.
-</li>
-    </ol>
-    <h2 id="pure_tone">Tono puro</h2>
-    <p>Un tono puro es una señal sinusoidal que tiene una única frecuencia. En este módulo se genera utilizando la función coseno, y se expresa mediante la siguiente fórmula:</p>
+                                                         <h2>Interfaz</h2>
+                                                         <img alt="Interfaz para generar tono puro" src="images/tono_es.png" style="width: 602.00px; margin-left: 0.00px; margin-top: 0.00px;">
+                                                         <ol>
+                                                             <li>
+                                                                 <b>Ventana de previsualización:</b> Permite ver la señal que generará el módulo. Se actualiza al cambiar el valor de algún parámetro.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Selector de amplitud:</b> Permite variar la <a href="#amplitude">amplitud</a> del coseno entre 0 y 1. El valor se puede cambiar deslizando el cursor o modificando el valor de la caja de texto.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Selector de frecuencia:</b> Permite variar la <a href="#frequency">frecuencia</a> del coseno entre 1 y 20000 Hz. El valor se puede cambiar deslizando el cursor o modificando el valor de la caja de texto.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Selector de fase:</b> Permite variar la <a href="#phase">fase</a> del coseno entre −π y π radianes. El valor se puede cambiar deslizando el cursor o modificando el valor de la caja de texto.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Selector de duración:</b> Permite variar la duración de la señal entre 1 y 30 segundos. El valor se puede cambiar deslizando el cursor o modificando el valor de la caja de texto.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Selector de offset:</b> Permite variar el <a href="#offset">offset</a> entre -2 y 2. El valor se puede cambiar deslizando el cursor o modificando el valor de la caja de texto.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Botón "Generar":</b> Abre una nueva ventana de visualización para observar una señal con los parámetros seleccionados.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Botones de reproducción:</b> Permiten reproducir o detener la reproducción de la señal.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Expresión:</b> Muestra la expresión matemática de la señal con los parámetros seleccionados. Se actualiza al cambiar el valor de algún parámetro.
+                                                             </li>
+                                                         </ol>
+                                                         <h2 id="pure_tone">Tono puro</h2>
+                                                         <p>Un tono puro es una señal sinusoidal que tiene una única frecuencia. En este módulo se genera utilizando la función coseno, y se expresa mediante la siguiente fórmula:</p>
 
-    <p class="formula">A cos(2πft + 𝜙),</p>
+                                                         <p class="formula">A cos(2πft + 𝜙) + C,</p>
 
-    <p>siendo <i>A</i> la <b>amplitud</b>, <i>f</i> la <b>frecuencia</b> y 𝜙 la <b>fase</b>.</p>
+                                                         <p>siendo <i>A</i> la <b>amplitud</b>, <i>f</i> la <b>frecuencia</b>, 𝜙 la <b>fase</b> y C el <b>offset</b>.</p>
 
-    <ul>
-        <li>
-            <b id="amplitude">Amplitud:</b> Valor máximo de la señal.<table>
-                <tbody><tr>
-                    <td>
-                        <img alt="Ejemplo amplitud" src="images/image4.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
-                    </td>
-                </tr>
-                <tr>
-                    <td>En este ejemplo la amplitud es 0.5.
-</td>
-                </tr>
-            </tbody></table>
-        </li>
-        <li>
-            <b id="frequency">Frecuencia:</b> Número de veces que se repite un ciclo entero de la señal dentro de una unidad de tiempo. Medido en Hercios (Hz) es el número de veces que se repite un ciclo de la señal en 1 segundo.
-<table>
-                <tbody>
-                <tr>
-                    <td>
-                        <img alt="Ejemplo frecuencia" src="images/image1.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
-                    </td>
-                </tr>
-                <tr>
-                    <td>En este ejemplo la frecuencia es 2 Hz.
-</td>
-                </tr>
-            </tbody></table>            
-        </li>
-        <li>
-            <b id="phase">Fase:</b> Desplazamiento del coseno. Se mide en radianes, siendo 2π radianes un ciclo completo de la señal.<table>
-                <tbody>
-                <tr>
-                    <td>
-                        <img alt="Ejemplo fase" src="images/image2.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
-                    </td>
-                </tr>
-                <tr>
-                    <td>En este ejemplo la señal está desplazada ¼ de ciclo, por lo que la fase es π/2 rad.
-</td>
-                </tr>
-            </tbody></table>            
-        </li>
-    </ul>
+                                                         <ul>
+                                                             <li>
+                                                                 <b id="amplitude">Amplitud:</b> Valor máximo de la señal.<table>
+                                                                     <tbody>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 <img alt="Ejemplo amplitud" src="images/image4.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
+                                                                             </td>
+                                                                         </tr>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 En este ejemplo la amplitud es 0.5.
+                                                                             </td>
+                                                                         </tr>
+                                                                     </tbody>
+                                                                 </table>
+                                                             </li>
+                                                             <li>
+                                                                 <b id="frequency">Frecuencia:</b> Número de veces que se repite un ciclo entero de la señal dentro de una unidad de tiempo. Medido en Hercios (Hz) es el número de veces que se repite un ciclo de la señal en 1 segundo.
+                                                                 <table>
+                                                                     <tbody>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 <img alt="Ejemplo frecuencia" src="images/image1.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
+                                                                             </td>
+                                                                         </tr>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 En este ejemplo la frecuencia es 2 Hz.
+                                                                             </td>
+                                                                         </tr>
+                                                                     </tbody>
+                                                                 </table>
+                                                             </li>
+                                                             <li>
+                                                                 <b id="phase">Fase:</b> Desplazamiento del coseno. Se mide en radianes, siendo 2π radianes un ciclo completo de la señal.<table>
+                                                                     <tbody>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 <img alt="Ejemplo fase" src="images/image2.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
+                                                                             </td>
+                                                                         </tr>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 En este ejemplo la señal está desplazada ¼ de ciclo, por lo que la fase es π/2 rad.
+                                                                             </td>
+                                                                         </tr>
+                                                                     </tbody>
+                                                                 </table>
+                                                             </li>
+                                                             <li>
+                                                                 <b id="offset">Offset:</b> Valor constante sumado a la señal.
+                                                                 <table>
+                                                                     <tr>
+                                                                         <td><img alt="Ejemplo de offset" src="images/offset_es.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;"></td>
+                                                                     </tr>
+                                                                     <tr>
+                                                                         <td>En este ejemplo el offset es 0.5</td>
+                                                                     </tr>
+                                                                 </table>
+                                                             </li>
+                                                         </ul>
 
-</body></html>
+                                                     </body></html>

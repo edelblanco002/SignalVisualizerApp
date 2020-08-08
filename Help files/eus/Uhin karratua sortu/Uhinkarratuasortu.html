@@ -57,88 +57,126 @@
     </style>
     <title>Uhin karratua sortu</title>
 </head>
-<body>
-    <h1>Uhin karratua sortu</h1>
-    <p>Modulo honek segundo bateko iraupeneko <a href="#square_wave">uhin karratuko</a> seinale bat sortzen du. <a href="#amplitude">Anplitudea</a>, <a href="#frequency">maiztasuna</a>, <a href="#phase">fasea</a> eta <a href="#cycle">ziklo aktiboa</a> hautatu ahal dira.</p>
-    <h2>Interfazea</h2>
-    <img alt="Uhin karratuak sortzeko interfazea" src="images/image2.png" style="width: 602.00px; height: 430.67px; margin-left: 0.00px; margin-top: 0.00px;">
-    <ol>
-        <li>
-            <b>Aurrebista leihoa:</b>Moduluak sortuko duen seinalea ikusteko aukera ematen du. Parametroren baten balioa aldatzean eguneratzen da.</li>
-        <li>
-            <b>Anplitude-hautagailua:</b> Uhin karratuaren <a href="#amplitude">anplitudea</a> 0 eta 1 artean aldatzea ahalbidetzen du. Balioa alda daiteke kurtsorea irristatuz edo testu-kutxaren balioa aldatuz.</li>
-        <li>
-            <b>Maiztasun-hautagailua:</b> Uhin karratuaren <a href="#frequency">maiztasuna</a> 1 eta 20000 Hz artean aldatzea ahalbidetzen du. Balioa alda daiteke kurtsorea irristatuz edo testu-kutxaren balioa aldatuz.</li>
-        <li>
-            <b>Fase-hautagailua:</b> Uhin karratuaren <a href="#phase">fasea</a> −π-ren eta π-ren artean aldatzeko aukera ematen du. Balioa alda daiteke kurtsorea irristatuz edo testu-kutxaren balioa aldatuz.
-</li>
-        <li>
-            <b>Ziklo aktiboko hautagailua:</b> Uhin karratuaren <a href="#cycle">ziklo aktiboa</a> % 10 eta % 90 artean alda daiteke.</li>
-        <li>
-            <b>"Sortu" botoia:</b> Beste bistaratze-leiho bat irekitzen du, hautatutako parametroak dituen seinale bat aztertzeko, segundo bateko iraupenekoa.</li>
-    </ol>
+                                                     <body>
+                                                         <h1>Uhin karratua sortu</h1>
+                                                         <p>Modulo honek <a href="#square_wave">uhin karratuko</a> seinale bat sortzen du. <a href="#amplitude">Anplitudea</a>, <a href="#frequency">maiztasuna</a>, <a href="#phase">fasea</a>, <a href="#cycle">ziklo aktiboa</a> eta <a href="#offset">offset-a</a> hautatu ahal dira.</p>
+                                                         <h2>Interfazea</h2>
+                                                         <img alt="Uhin karratuak sortzeko interfazea" src="images/square_eus.png" style="width: 602.00px; margin-left: 0.00px; margin-top: 0.00px;">
+                                                         <ol>
+                                                             <li>
+                                                                 <b>Aurrebista leihoa:</b>Moduluak sortuko duen seinalea ikusteko aukera ematen du. Parametroren baten balioa aldatzean eguneratzen da.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Anplitude-hautagailua:</b> Uhin karratuaren <a href="#amplitude">anplitudea</a> 0 eta 1 artean aldatzea ahalbidetzen du. Balioa alda daiteke kurtsorea irristatuz edo testu-kutxaren balioa aldatuz.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Maiztasun-hautagailua:</b> Uhin karratuaren <a href="#frequency">maiztasuna</a> 1 eta 20000 Hz artean aldatzea ahalbidetzen du. Balioa alda daiteke kurtsorea irristatuz edo testu-kutxaren balioa aldatuz.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Fase-hautagailua:</b> Uhin karratuaren <a href="#phase">fasea</a> −π-ren eta π-ren artean aldatzeko aukera ematen du. Balioa alda daiteke kurtsorea irristatuz edo testu-kutxaren balioa aldatuz.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Ziklo aktiboko hautagailua:</b> Uhin karratuaren <a href="#cycle">ziklo aktiboa</a> % 10 eta % 90 artean alda daiteke.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Iraupen-hautagailua:</b> Seinalearen iraupena 1 eta 30 segunduen artean hautatzea ahalbidetzen du. Balioa kursorea mugitzen edo testu-kutxaren balioa aldatzen hautatu ahal da.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Offset-hautagailua:</b> Seinalearen <a href="#offset">offset-a</a> -2 eta 2-ren artean hautatzea ahalbidetzen du. Balioa kursorea mugitzen edo testu-kutxaren balioa aldatzen hautatu ahal da.
+                                                             </li>
+                                                             <li>
+                                                                 <b>"Sortu" botoia:</b> Beste bistaratze-leiho bat irekitzen du, hautatutako parametroak dituen seinale bat aztertzeko.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Erreprodukzio-botoiak:</b> Audio-seinalearen erreprodukzioa kontrolatzea ahalbidetzen dute.
+                                                             </li>
+                                                         </ol>
 
 
 
-    <h2 id="square_wave">Uhin karratua</h2>
+                                                         <h2 id="square_wave">Uhin karratua</h2>
 
-    <p>Uhin karratua bi mailen arteko bat-bateko trantsizioen bidez eratzen den uhin periodiko bat da.<br>Konfiguratu daitezkeen parametroak honako hauek dira:</p>
+                                                         <p>Uhin karratua bi mailen arteko bat-bateko trantsizioen bidez eratzen den uhin periodiko bat da.<br>Konfiguratu daitezkeen parametroak honako hauek dira:</p>
 
-    <ul>
-        <li>
-            <b id="amplitude">Anplitudea:</b> Bi mailen arteko aldea.
-<table>
-                <tbody><tr>
-                    <td>
-                        <img alt="Anplitude adibidea" src="images/image3.png" style="width: 587.00px; height: 286.67px; margin-left: 0.00px; margin-top: 0.00px;">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Adibide honetan anplitudea 1 da.
-</td>
-                </tr>
-            </tbody></table>
-        </li>
-        <li>
-            <b id="frequency">Maiztasuna:</b> Segundo 1-ean sartzen diren ziklo kopurua, Hz-n neurtuta. (Informazio gehiago nahi izanez gero, sakatu <a href="#frequency2">hemen</a>).</li>
-        <li>
-            <b id="phase">Fasea:</b> Seinalea jatorrizko posizioarekiko lekualdatzea. (Informazio gehiago nahi izanez gero, sakatu <a href="#phase2">hemen</a>).</li>
-        <li>
-            <b id="cycle">Ziklo aktiboa:</b> Seinalea goiko mailan (edo maila aktiboan) dagoen periodoaren zatia. Kasu honetan, ehuneko batean neurtzen da, periodoaren guztizko iraupenarekiko.<br><br>
-            <img alt="Ziklo aktiboko adibidea 1" src="images/image1.png" style="width: 587.00px; height: 302.67px; margin-left: 0.00px; margin-top: 0.00px;">
-            <img alt="Ziklo aktiboko adibidea 2" src="images/image4.png" style="width: 587.00px; height: 286.67px; margin-left: 0.00px; margin-top: 0.00px;">
-        </li>
-    </ul>
+                                                         <ul>
+                                                             <li>
+                                                                 <b id="amplitude">Anplitudea:</b> Bi mailen arteko aldea.
+                                                                 <table>
+                                                                     <tbody>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 <img alt="Anplitude adibidea" src="images/image3.png" style="width: 587.00px; height: 286.67px; margin-left: 0.00px; margin-top: 0.00px;">
+                                                                             </td>
+                                                                         </tr>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 Adibide honetan anplitudea 1 da.
+                                                                             </td>
+                                                                         </tr>
+                                                                     </tbody>
+                                                                 </table>
+                                                             </li>
+                                                             <li>
+                                                                 <b id="frequency">Maiztasuna:</b> Segundo 1-ean sartzen diren ziklo kopurua, Hz-n neurtuta. (Informazio gehiago nahi izanez gero, sakatu <a href="#frequency2">hemen</a>).
+                                                             </li>
+                                                             <li>
+                                                                 <b id="phase">Fasea:</b> Seinalea jatorrizko posizioarekiko lekualdatzea. (Informazio gehiago nahi izanez gero, sakatu <a href="#phase2">hemen</a>).
+                                                             </li>
+                                                             <li>
+                                                                 <b id="cycle">Ziklo aktiboa:</b> Seinalea goiko mailan (edo maila aktiboan) dagoen periodoaren zatia. Kasu honetan, ehuneko batean neurtzen da, periodoaren guztizko iraupenarekiko.<br><br>
+                                                                 <img alt="Ziklo aktiboko adibidea 1" src="images/image1.png" style="width: 587.00px; height: 302.67px; margin-left: 0.00px; margin-top: 0.00px;">
+                                                                 <img alt="Ziklo aktiboko adibidea 2" src="images/image4.png" style="width: 587.00px; height: 286.67px; margin-left: 0.00px; margin-top: 0.00px;">
+                                                             </li>
+                                                             <li>
+                                                                 <b id="offset">Offset:</b> Seinaleari gehitzen zaion balio konstantea. (Informazio gehiago nahi izanez gero, sakatu <a href="#offset2">hemen</a>).
+                                                             </li>
+                                                         </ul>
 
-    <h2>Informazio gehiago</h2>
-    <ul>
-        <li>
-            <b id="frequency2">Maiztasuna:</b> Denbora tarte batean seinale-ziklo oso bat zebat aldiz errepikatzen den adierazten du. Hertzetan neurrituta, segundu batean seinale-ziklo baten errepikapen kopurua.<table>
-                <tbody><tr>
-                    <td>
-                        <img alt="Maiztasun adibidea" src="images/image6.png" style="width: 602.00px; height: 206.67px; margin-left: 0.00px; margin-top: 0.00px;">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Adibide honetan maiztasuna 2 Hz-ekoa da.
-Adibide honetan maiztasuna 2 Hz-ekoa da.
-</td>
-                </tr>
-            </tbody></table>
-        </li>
-        <li>
-            <b id="phase2">Fasea:</b> Cosinuaren desplazamendua. Radianetan neurtzen da, seinale-ziklo oso bat 2π radian izanez.<table>
-                <tbody><tr>
-                    <td>
-                        <img alt="Fase adibidea" src="images/image5.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Adibide honetan seinalea ziklo ¼-a desplazatuta dago. Beraz, fasea  π/2 rad-ekoa da.
-</td>
-                </tr>
-            </tbody></table>
-        </li>
-    </ul>
+                                                         <h2>Informazio gehiago</h2>
+                                                         <ul>
+                                                             <li>
+                                                                 <b id="frequency2">Maiztasuna:</b> Denbora tarte batean seinale-ziklo oso bat zebat aldiz errepikatzen den adierazten du. Hertzetan neurrituta, segundu batean seinale-ziklo baten errepikapen kopurua.<table>
+                                                                     <tbody>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 <img alt="Maiztasun adibidea" src="images/image6.png" style="width: 602.00px; height: 206.67px; margin-left: 0.00px; margin-top: 0.00px;">
+                                                                             </td>
+                                                                         </tr>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 Adibide honetan maiztasuna 2 Hz-ekoa da.
+                                                                             </td>
+                                                                         </tr>
+                                                                     </tbody>
+                                                                 </table>
+                                                             </li>
+                                                             <li>
+                                                                 <b id="phase2">Fasea:</b> Cosinuaren desplazamendua. Radianetan neurtzen da, seinale-ziklo oso bat 2π radian izanez.<table>
+                                                                     <tbody>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 <img alt="Fase adibidea" src="images/image5.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
+                                                                             </td>
+                                                                         </tr>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 Adibide honetan seinalea ziklo ¼-a desplazatuta dago. Beraz, fasea  π/2 rad-ekoa da.
+                                                                             </td>
+                                                                         </tr>
+                                                                     </tbody>
+                                                                 </table>
+                                                             </li>
+                                                             <li>
+                                                                 <b id="offset2">Offset:</b> Seinaleari gehitzen zaion balio konstantea.
+                                                                 <table>
+                                                                     <tr>
+                                                                         <td><img alt="Offset-eko adibidea" src="images/offset_eus.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;"></td>
+                                                                     </tr>
+                                                                     <tr>
+                                                                         <td>Adibide honetan offset-a 0.5</td>
+                                                                     </tr>
+                                                                 </table>
+                                                             </li>
+                                                         </ul>
 
-</body></html>
+                                                     </body></html>

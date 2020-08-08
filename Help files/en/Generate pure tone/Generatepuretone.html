@@ -60,10 +60,10 @@
 </head>
 <body>
     <h1>Generate pure tone</h1>
-    <p>This module allows the generation of a <a href="#pure_tone">pure tone</a> of one second duration, with the possibility of modifying the parameters of <a href="#amplitude">amplitude</a>, <a href="#frequency">frequency</a> and <a href="#phase">phase</a>.</p>
+    <p>This module allows the generation of a <a href="#pure_tone">pure tone</a>, with the possibility of modifying the parameters of <a href="#amplitude">amplitude</a>, <a href="#frequency">frequency</a>, <a href="#phase">phase</a> and <a href="#offset">offset</a>.</p>
 
     <h2>Interface</h2>
-    <img alt="Generate pure tone interface" src="images/image4.png" style="width: 602.00px; height: 413.33px; margin-left: 0.00px; margin-top: 0.00px;">
+    <img alt="Generate pure tone interface" src="images/tono_en.png" style="width: 602.00px; margin-left: 0.00px; margin-top: 0.00px;">
 
     <ol>
         <li>
@@ -79,7 +79,16 @@
             <b>Phase selector:</b> Allows to vary the <a href="#phase">phase</a> of the cosine between -π and π radians. The value can be changed by sliding the or by changing the value in the text box.
         </li>
         <li>
-            <b>"Generate" button:</b> Opens a new display window to observe a signal with the selected parameters, with a length of 1 second.
+            <b>Duration selector:</b> Allows to vary the duration of the signal between 1 and 30 seconds. The value can be changed by sliding the or by changing the value in the text box.
+        </li>
+        <li>
+            <b>Offset selector:</b> Allows to vary the <a href="#offset">offset</a> between -2 and 2. The value can be changed by sliding the cursor or by changing the value in the text box.
+        </li>
+        <li>
+            <b>"Generate" button:</b> Opens a new display window to observe a signal with the selected parameters.
+        </li>
+        <li>
+            <b>Playback buttons:</b> They allow to control the playback of the audio signal.
         </li>
         <li>
             <b>Expression:</b> Shows the mathematical expression of the signal with the selected parameters. It is updated when the value of a parameter changes.
@@ -88,9 +97,9 @@
     <h2 id="pure_tone">Pure tone</h2>
     <p>A pure tone is a sinusoidal signal that has a single frequency. In this module it is generated using the cosine function, and it is expressed by the following formula:</p>
 
-    <p class="formula">A cos(2πft + 𝜙),</p>
+    <p class="formula">A cos(2πft + 𝜙) + C,</p>
 
-    <p>where A is the amplitude, f is the frequency and 𝜙 is the phase.</p>
+    <p>where A is the <b>amplitude</b>, f is the <b>frequency</b>, 𝜙 is the <b>phase</b> and C is the <b>offset</b>.</p>
 
     <ul>
         <li>
@@ -113,7 +122,7 @@
                 <tr>
                     <td>In this example the frequency is 2 Hz</td>
                 </tr>
-            </table>            
+            </table>
         </li>
         <li>
             <b id="phase">Phase:</b> Displacement of the cosine. It is measured in radians, being 2π radian a complete cycle of the signal.
@@ -124,7 +133,18 @@
                 <tr>
                     <td>In this example the signal is shifted ¼ of cycle, so the phase is π/2 rad</td>
                 </tr>
-            </table>            
+            </table>
+        </li>
+        <li>
+            <b id="offset">Offset:</b> Constant value added to the signal.
+            <table>
+                <tr>
+                    <td><img alt="Offset example" src="images/offset_en.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;"></td>
+                </tr>
+                <tr>
+                    <td>In this example the offset is 0.5</td>
+                </tr>
+            </table>
         </li>
     </ul>
 </body>

@@ -57,93 +57,132 @@
     </style>
     <title>Generar onda cuadrada</title>
 </head>
-<body>
-    <h1>Generar onda cuadrada</h1>
-    <p>Este módulo permite generar una señal de <a href="#square_wave">onda cuadrada</a> de un segundo de duración, con la posibilidad de modificar los parámetros de <a href="#amplitude">amplitud</a>, <a href="#frequency">frecuencia</a>, <a href="#phase">fase</a> y <a href="#cycle">ciclo activo</a>.
-    </p>
-    <h2>Interfaz</h2>
-    <img alt="Interfaz generar onda cuadrada" src="images/image1.png" style="width: 602.00px; height: 630.67px; margin-left: 0.00px; margin-top: 0.00px;">
-    <ol>
-        <li>
-            <b>Ventana de previsualización:</b> Permite ver la señal que generará el módulo. Se actualiza al cambiar el valor de algún parámetro.</li>
-        <li>
-            <b>Selector de amplitud:</b> Permite variar la <a href="#amplitude">amplitud</a> de la onda cuadrada entre 0 y 1. El valor se puede cambiar deslizando el cursor o modificando el valor de la caja de texto.</li>
-        <li>
-            <b>Selector de frecuencia:</b> Permite variar la <a href="#frequency">frecuencia</a> de la onda cuadrada  entre 1 y 20000 Hz. El valor se puede cambiar deslizando el cursor o modificando el valor de la caja de texto.</li>
-        <li>
-            <b>Selector de fase:</b> Permite variar la <a href="#phase">fase</a> de la onda cuadrada entre −π y π radianes. El valor se puede cambiar deslizando el cursor o modificando el valor de la caja de texto.</li>
-        <li>
-            <b>Selector de ciclo activo:</b> Permite variar el <a href="#cycle">ciclo activo</a>de la onda cuadrada entre el 10% y el 90%.</li>
-        <li>
-            <b>Botón "Generar":</b> Abre una nueva ventana de visualización para observar una señal con los parámetros seleccionados, de 1 segundo de duración.</li>
-    </ol>
+                                                     <body>
+                                                         <h1>Generar onda cuadrada</h1>
+                                                         <p>
+                                                             Este módulo permite generar una señal de <a href="#square_wave">onda cuadrada</a>, con la posibilidad de modificar los parámetros de <a href="#amplitude">amplitud</a>, <a href="#frequency">frecuencia</a>, <a href="#phase">fase</a>, <a href="#cycle">ciclo activo</a> y <a href="#offset">offset</a>.
+                                                         </p>
+                                                         <h2>Interfaz</h2>
+                                                         <img alt="Interfaz para generar señal de onda cuadrada" src="images/square_es.png" style="width: 602.00px; margin-left: 0.00px; margin-top: 0.00px;">
+                                                         <ol>
+                                                             <li>
+                                                                 <b>Ventana de previsualización:</b> Permite ver la señal que generará el módulo. Se actualiza al cambiar el valor de algún parámetro.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Selector de amplitud:</b> Permite variar la <a href="#amplitude">amplitud</a> de la onda cuadrada entre 0 y 1. El valor se puede cambiar deslizando el cursor o modificando el valor de la caja de texto.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Selector de frecuencia:</b> Permite variar la <a href="#frequency">frecuencia</a> de la onda cuadrada  entre 1 y 20000 Hz. El valor se puede cambiar deslizando el cursor o modificando el valor de la caja de texto.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Selector de fase:</b> Permite variar la <a href="#phase">fase</a> de la onda cuadrada entre −π y π radianes. El valor se puede cambiar deslizando el cursor o modificando el valor de la caja de texto.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Selector de ciclo activo:</b> Permite variar el <a href="#cycle">ciclo activo</a>de la onda cuadrada entre el 10% y el 90%.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Selector de duración:</b> Permite variar la duración de la señal entre 1 y 30 segundos. El valor se puede cambiar deslizando el cursor o modificando el valor de la caja de texto.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Selector de offset:</b> Permite variar el <a href="#offset">offset</a> entre -2 y 2. El valor se puede cambiar deslizando el cursor o modificando el valor de la caja de texto.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Botón "Generar":</b> Abre una nueva ventana de visualización para observar una señal con los parámetros seleccionados.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Botones de reproducción:</b> Permiten reproducir o detener la reproducción de la señal.
+                                                             </li>
+                                                         </ol>
 
 
 
-    <h2 id="square_wave">Onda cuadrada</h2>
+                                                         <h2 id="square_wave">Onda cuadrada</h2>
 
-    <p>Una onda cuadrada es una onda periódica que se forma mediante transiciones instantáneas entre dos niveles.<br>Los parámetros configurables son los siguientes:</p>
+                                                         <p>Una onda cuadrada es una onda periódica que se forma mediante transiciones instantáneas entre dos niveles.<br>Los parámetros configurables son los siguientes:</p>
 
-    <ul>
-        <li>
-            <b id="amplitude">Amplitud:</b> Diferencia entre los dos niveles.<table>
-                <tbody><tr>
-                    <td>
-                        <img alt="Ejemplo amplitud" src="images/image6.png" style="width: 587.00px; height: 286.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
-                    </td>
-                </tr>
-                <tr>
-                    <td>En este ejemplo la amplitud es 1.
+                                                         <ul>
+                                                             <li>
+                                                                 <b id="amplitude">Amplitud:</b> Diferencia entre los dos niveles.<table>
+                                                                     <tbody>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 <img alt="Ejemplo amplitud" src="images/image6.png" style="width: 587.00px; height: 286.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
+                                                                             </td>
+                                                                         </tr>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 En este ejemplo la amplitud es 1.
 
-</td>
-                </tr>
-            </tbody></table>
-        </li>
-        <li>
-            <b id="frequency">Frecuencia:</b> Número de periodos en 1 segundo, medido en Hz. (Para más información, pulsa <a href="#frequency2">aquí</a>).
-        </li>
-        <li>
-            <b id="phase">Fase:</b> Desplazamiento de la señal con respecto a su posición original. (Para más información, pulsa <a href="#phase2">aquí</a>).
-        </li>
-        <li>
-            <b id="cycle">Ciclo activo:</b> Parte del periodo en la que la señal se encuentra en el nivel superior (o nivel activo). En este caso se mide en un porcentaje respecto a la duración total del periodo.<br><br>
-            <img alt="Ejemplo ciclo activo 1" src="images/image5.png" style="width: 587.00px; height: 302.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
-            <img alt="Ejemplo ciclo activo 2" src="images/image3.png" style="width: 587.00px; height: 286.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
-        </li>
-    </ul>
+                                                                             </td>
+                                                                         </tr>
+                                                                     </tbody>
+                                                                 </table>
+                                                             </li>
+                                                             <li>
+                                                                 <b id="frequency">Frecuencia:</b> Número de periodos en 1 segundo, medido en Hz. (Para más información, pulsa <a href="#frequency2">aquí</a>).
+                                                             </li>
+                                                             <li>
+                                                                 <b id="phase">Fase:</b> Desplazamiento de la señal con respecto a su posición original. (Para más información, pulsa <a href="#phase2">aquí</a>).
+                                                             </li>
+                                                             <li>
+                                                                 <b id="cycle">Ciclo activo:</b> Parte del periodo en la que la señal se encuentra en el nivel superior (o nivel activo). En este caso se mide en un porcentaje respecto a la duración total del periodo.<br><br>
+                                                                 <img alt="Ejemplo ciclo activo 1" src="images/image5.png" style="width: 587.00px; height: 302.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
+                                                                 <img alt="Ejemplo ciclo activo 2" src="images/image3.png" style="width: 587.00px; height: 286.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
+                                                             </li>
+                                                             <li>
+                                                                 <b id="offset">Offset:</b> Valor constante sumado a la señal. (Para más información, pulsa <a href="#offset2">aquí</a>).
+                                                             </li>
+                                                         </ul>
 
-    <h2>Más información</h2>
-    <ul>
-        <li>
-            <b id="frequency2">Frecuencia:</b> Número de veces que se repite un ciclo entero de la señal dentro de una unidad de tiempo. Medido en Hercios (Hz) es el número de veces que se repite un ciclo de la señal en 1 segundo.<table>
-                <tbody><tr>
-                    <td>
-                        <img alt="Ejemplo frecuencia" src="images/image2.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
-                    </td>
-                </tr>
-                <tr>
-                    <td>En este ejemplo la frecuencia es 2 Hz.
+                                                         <h2>Más información</h2>
+                                                         <ul>
+                                                             <li>
+                                                                 <b id="frequency2">Frecuencia:</b> Número de veces que se repite un ciclo entero de la señal dentro de una unidad de tiempo. Medido en Hercios (Hz) es el número de veces que se repite un ciclo de la señal en 1 segundo.<table>
+                                                                     <tbody>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 <img alt="Ejemplo frecuencia" src="images/image2.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
+                                                                             </td>
+                                                                         </tr>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 En este ejemplo la frecuencia es 2 Hz.
 
-</td>
-                </tr>
-            </tbody></table>
-        </li>
-        <li>
-            <b id="phase2">Fase:</b> Desplazamiento del coseno. Se mide en radianes, siendo 2π radianes un ciclo completo de la señal.
+                                                                             </td>
+                                                                         </tr>
+                                                                     </tbody>
+                                                                 </table>
+                                                             </li>
+                                                             <li>
+                                                                 <b id="phase2">Fase:</b> Desplazamiento del coseno. Se mide en radianes, siendo 2π radianes un ciclo completo de la señal.
 
-<table>
-                <tbody><tr>
-                    <td>
-                        <img alt="Ejemplo fase" src="images/image4.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
-                    </td>
-                </tr>
-                <tr>
-                    <td>En este ejemplo la señal está desplazada ¼ de ciclo, por lo que la fase es π/2 rad.
+                                                                 <table>
+                                                                     <tbody>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 <img alt="Ejemplo fase" src="images/image4.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
+                                                                             </td>
+                                                                         </tr>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 En este ejemplo la señal está desplazada ¼ de ciclo, por lo que la fase es π/2 rad.
 
-</td>
-                </tr>
-            </tbody></table>
-        </li>
-    </ul>
+                                                                             </td>
+                                                                         </tr>
+                                                                     </tbody>
+                                                                 </table>
+                                                             </li>
+                                                             <li>
+                                                                 <b id="offset2">Offset:</b> Valor constante sumado a la señal.
+                                                                 <table>
+                                                                     <tr>
+                                                                         <td><img alt="Ejemplo de offset" src="images/offset_es.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;"></td>
+                                                                     </tr>
+                                                                     <tr>
+                                                                         <td>En este ejemplo el offset es 0.5</td>
+                                                                     </tr>
+                                                                 </table>
+                                                             </li>
+                                                         </ul>
 
-</body></html>
+                                                     </body></html>

@@ -58,76 +58,112 @@
 	}
     </style>
 </head>
-<body>
-    <h1>Tonu purua sortu
-</h1>
-    <p>Modulo honek segundo bateko iraupeneko <a href="#pure_tone">tonu puru</a> bat sortzen du. <a href="#amplitude">Anplitudea</a>, <a href="#frequency">maiztasuna</a> eta <a href="#phase">fasea</a> hautatzea ahalbidetzen du.</p>
+                                                     <body>
+                                                         <h1>
+                                                             Tonu purua sortu
+                                                         </h1>
+                                                         <p>Modulo honek <a href="#pure_tone">tonu puru</a> bat sortzen du. <a href="#amplitude">Anplitudea</a>, <a href="#frequency">maiztasuna</a>, <a href="#phase">fasea</a> eta <a href="#offset">offset-a</a> hautatzea ahalbidetzen du.</p>
 
-    <h2>Interfazea</h2>
-    <img alt="Tonu puruak sortzeko interfazea" src="images/image2.png" style="width: 602.00px; height: 413.33px; margin-left: 0.00px; margin-top: 0.00px;">
-    <ol>
-        <li>
-            <b>Aurrebista-leihoa:</b> Modulua sortuko duen seinalea aurreikupena erakusten du. Parametro baten balioa aldatzean eguneratzen da.</li>
-        <li>
-            <b>Amplitude-hautagailua:</b> Kosinuaren <a href="#amplitude">anplitudea</a> 0-ren eta 1-ren artean hautatzea ahalbidetzen du. Balioa kursorea mugitzen edo testu-kutxaren balioa aldatzen hautatu ahal da.</li>
-        <li>
-            <b>Maiztasun-hautagailua:</b> Kosinuaren <a href="#frequency">maiztasuna</a> Hertz bat eta 20000 Hertzen artean hautatzea ahalbidetzen du. Balioa kursorea mugitzen edo testu-kutxaren balioa aldatzen hautatu ahal da.</li>
-        <li>
-            <b>Fase-hautagailua:</b> Kosinuaren <a href="#phase">fasea</a> −π y π radianen artean hautatzea ahalbidetzen du. Balioa kursorea mugitzen edo testu-kutxaren balioa aldatzen hautatu ahal da.</li>
-        <li>
-            <b>"Sortu" botoia:</b> Bistaratze-leiho berri bat irekitzen du, hautatutako parametroekin sortutako seinale bat, segundu bateko iraupena duena, aztertzeko.</li>
-        <li>
-            <b>Adierazpena:</b> Seinalearen adierazpen matematikoa erakusten du, hautatutako parametroekin. Parametro baten balioa aldatzean eguneratzen da.</li>
-    </ol>
-    <h2 id="pure_tone">Tonu purua</h2>
-    <p>Tonu puru bat seinale sinusoide bat da, maiztasun bakarra duena. Modulu honetan sortzen da kosinu funtzioa erabiliz, eta hurrengo formularekin adierazten da:</p>
+                                                         <h2>Interfazea</h2>
+                                                         <img alt="Tonu purua sortzeko interfazea" src="images/tono_eus.png" style="width: 602.00px; margin-left: 0.00px; margin-top: 0.00px;">
+                                                         <ol>
+                                                             <li>
+                                                                 <b>Aurrebista-leihoa:</b> Modulua sortuko duen seinalea aurreikupena erakusten du. Parametro baten balioa aldatzean eguneratzen da.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Amplitude-hautagailua:</b> Kosinuaren <a href="#amplitude">anplitudea</a> 0-ren eta 1-ren artean hautatzea ahalbidetzen du. Balioa kursorea mugitzen edo testu-kutxaren balioa aldatzen hautatu ahal da.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Maiztasun-hautagailua:</b> Kosinuaren <a href="#frequency">maiztasuna</a> Hertz bat eta 20000 Hertzen artean hautatzea ahalbidetzen du. Balioa kursorea mugitzen edo testu-kutxaren balioa aldatzen hautatu ahal da.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Fase-hautagailua:</b> Kosinuaren <a href="#phase">fasea</a> −π y π radianen artean hautatzea ahalbidetzen du. Balioa kursorea mugitzen edo testu-kutxaren balioa aldatzen hautatu ahal da.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Iraupen-hautagailua:</b> Seinalearen iraupena 1 eta 30 segunduen artean hautatzea ahalbidetzen du. Balioa kursorea mugitzen edo testu-kutxaren balioa aldatzen hautatu ahal da.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Offset-hautagailua:</b> Seinalearen <a href="#offset">offset-a</a> -2 eta 2-ren artean hautatzea ahalbidetzen du. Balioa kursorea mugitzen edo testu-kutxaren balioa aldatzen hautatu ahal da.
+                                                             </li>
+                                                             <li>
+                                                                 <b>"Sortu" botoia:</b> Bistaratze-leiho berri bat irekitzen du, hautatutako parametroekin sortutako seinale bat aztertzeko.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Erreprodukzio-botoiak:</b> Audio-seinalearen erreprodukzioa kontrolatzea ahalbidetzen dute.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Adierazpena:</b> Seinalearen adierazpen matematikoa erakusten du, hautatutako parametroekin. Parametro baten balioa aldatzean eguneratzen da.
+                                                             </li>
+                                                         </ol>
+                                                         <h2 id="pure_tone">Tonu purua</h2>
+                                                         <p>Tonu puru bat seinale sinusoide bat da, maiztasun bakarra duena. Modulu honetan sortzen da kosinu funtzioa erabiliz, eta hurrengo formularekin adierazten da:</p>
 
-    <p class="formula">A cos(2πft + 𝜙),</p>
+                                                         <p class="formula">A cos(2πft + 𝜙) + C,</p>
 
-    <p>non A anplitudea, f maiztasuna eta 𝜙 fasea den.</p>
+                                                         <p>non A <b>anplitudea</b>, f <b>maiztasuna</b>, 𝜙 <b>fasea</b> eta C <b>offset-a</b> den.</p>
 
-    <ul>
-        <li>
-            <b id="amplitude">Anplitudea:</b> Seinalearen gehienezko balioa da.
-<table>
-                <tbody><tr>
-                    <td>
-                        <img alt="Anplitude adibidea" src="images/image1.png" style="width: 602.00px; height: 206.67px; margin-left: 0.00px; margin-top: 0.00px;">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Adibide honetan anplitudea 0.5 da.
-</td>
-                </tr>
-            </tbody></table>
-        </li>
-        <li>
-            <b id="frequency">Maiztasuna:</b> Denbora tarte batean seinale-ziklo oso bat zebat aldiz errepikatzen den adierazten du. Hertzetan neurrituta, segundu batean seinale-ziklo baten errepikapen kopurua.<table>
-                <tbody><tr>
-                    <td>
-                        <img alt="Maiztasun adibidea" src="images/image4.png" style="width: 602.00px; height: 206.67px; margin-left: 0.00px; margin-top: 0.00px;">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Adibide honetan maiztasuna 2 Hz-ekoa da.
-</td>
-                </tr>
-            </tbody></table>            
-        </li>
-        <li>
-            <b id="phase">Fasea:</b>Kosinuaren desplazamendua. Radianetan neurtzen da, seinale-ziklo oso bat 2π radian izanez.
-<table>
-                <tbody><tr>
-                    <td>
-                        <img alt="Fase adibidea" src="images/image3.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Adibide honetan seinalea ziklo ¼-a desplazatuta dago. Beraz, fasea  π/2 rad-ekoa da.
-</td>
-                </tr>
-            </tbody></table>            
-        </li>
-    </ul>
+                                                         <ul>
+                                                             <li>
+                                                                 <b id="amplitude">Anplitudea:</b> Seinalearen gehienezko balioa da.
+                                                                 <table>
+                                                                     <tbody>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 <img alt="Anplitude adibidea" src="images/image1.png" style="width: 602.00px; height: 206.67px; margin-left: 0.00px; margin-top: 0.00px;">
+                                                                             </td>
+                                                                         </tr>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 Adibide honetan anplitudea 0.5 da.
+                                                                             </td>
+                                                                         </tr>
+                                                                     </tbody>
+                                                                 </table>
+                                                             </li>
+                                                             <li>
+                                                                 <b id="frequency">Maiztasuna:</b> Denbora tarte batean seinale-ziklo oso bat zebat aldiz errepikatzen den adierazten du. Hertzetan neurrituta, segundu batean seinale-ziklo baten errepikapen kopurua.<table>
+                                                                     <tbody>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 <img alt="Maiztasun adibidea" src="images/image4.png" style="width: 602.00px; height: 206.67px; margin-left: 0.00px; margin-top: 0.00px;">
+                                                                             </td>
+                                                                         </tr>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 Adibide honetan maiztasuna 2 Hz-ekoa da.
+                                                                             </td>
+                                                                         </tr>
+                                                                     </tbody>
+                                                                 </table>
+                                                             </li>
+                                                             <li>
+                                                                 <b id="phase">Fasea:</b>Kosinuaren desplazamendua. Radianetan neurtzen da, seinale-ziklo oso bat 2π radian izanez.
+                                                                 <table>
+                                                                     <tbody>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 <img alt="Fase adibidea" src="images/image3.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
+                                                                             </td>
+                                                                         </tr>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 Adibide honetan seinalea ziklo ¼-a desplazatuta dago. Beraz, fasea  π/2 rad-ekoa da.
+                                                                             </td>
+                                                                         </tr>
+                                                                     </tbody>
+                                                                 </table>
+                                                             </li>
+                                                             <li>
+                                                                 <b id="offset">Offset:</b> Seinaleari gehitzen zaion balio konstantea.
+                                                                 <table>
+                                                                     <tr>
+                                                                         <td><img alt="Offset-eko adibidea" src="images/offset_eus.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;"></td>
+                                                                     </tr>
+                                                                     <tr>
+                                                                         <td>Adibide honetan offset-a 0.5 da</td>
+                                                                     </tr>
+                                                                 </table>
+                                                             </li>
+                                                         </ul>
 
-</body></html>
+                                                     </body></html>

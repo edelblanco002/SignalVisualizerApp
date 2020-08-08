@@ -61,11 +61,11 @@
 <body>
     <h1>Generate sawtooth signal</h1>
     <p>
-        This module allows the generation of a <a href="#sawtooth_signal">sawtooth signal</a> of one second duration, with the possibility of modifying the parameters of <a href="#amplitude">amplitude</a>, <a href="#frequency">frequency</a>, <a href="#phase">phase</a> and <a href="#max">position of the maximum</a>.
+        This module allows the generation of a <a href="#sawtooth_signal">sawtooth signal</a>, with the possibility of modifying the parameters of <a href="#amplitude">amplitude</a>, <a href="#frequency">frequency</a>, <a href="#phase">phase</a>, <a href="#max">position of the maximum</a> and <a href="#offset">offset</a>.
     </p>
     <h2>Interface</h2>
 
-    <img alt="Generate sawtooth interface" src="images/image6.png" style="width: 602.00px; height: 422.67px; margin-left: 0.00px; margin-top: 0.00px;">
+    <img alt="Generate sawtooth interface" src="images/sawtooth_en.png" style="width: 602.00px; margin-left: 0.00px; margin-top: 0.00px;">
 
     <ol>
         <li>
@@ -84,7 +84,16 @@
             <b>Maximum position selector:</b> Allows to vary the <a href="#max">position of the maximum</a> between 0 and 1.
         </li>
         <li>
-            <b>"Generate" button:</b> Opens a new display window to observe a signal with the selected parameters, lasting 1 second.
+            <b>Duration selector:</b> Allows to vary the duration of the signal between 1 and 30 seconds. The value can be changed by sliding the or by changing the value in the text box.
+        </li>
+        <li>
+            <b>Offset selector:</b> Allows to vary the <a href="#offset">offset</a> between -2 and 2. The value can be changed by sliding the cursor or by changing the value in the text box.
+        </li>
+        <li>
+            <b>"Generate" button:</b> Opens a new display window to observe a signal with the selected parameters.
+        </li>
+        <li>
+            <b>Playback buttons:</b> They allow to control the playback of the audio signal.
         </li>
     </ol>
 
@@ -149,7 +158,10 @@
                         Maximum position: 0
                     </td>
                 </tr>
-            </table>                        
+            </table>
+        </li>
+        <li>
+            <b id="offset">Offset:</b> Constant value added to the signal. (For more information, click <a href="#offset2">here</a>).
         </li>
     </ul>
 
@@ -184,6 +196,17 @@
                     <td>
                         In this example the signal is shifted ¼ of cycle, so the phase is π/2 rad.
                     </td>
+                </tr>
+            </table>
+        </li>
+        <li>
+            <b id="offset2">Offset:</b> Constant value added to the signal.
+            <table>
+                <tr>
+                    <td><img alt="Offset example" src="images/offset_en.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;"></td>
+                </tr>
+                <tr>
+                    <td>In this example the offset is 0.5</td>
                 </tr>
             </table>
         </li>

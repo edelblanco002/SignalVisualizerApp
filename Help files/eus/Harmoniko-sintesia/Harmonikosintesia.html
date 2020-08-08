@@ -105,238 +105,259 @@
         }
     </style>
 </head>
-<body>
-    <h1>Tonu puruen gehiketa librea</h1>
-    <p>Modulu honek sei <a href="#pure_tone">tonu puru</a> gainjarri arte sortu ahal ditu, bakoitzak <a href="#frequency">maiztasun</a> eta <a href="#amplitude">anplitude</a> ezberdinarekin. Azpialdeko teklatuarekin nota bat aukeratu ahal da, bere lehenengo sei <a href="#harmonics">harmonikoak</a> ikusteko.</p>
-    <h2>Interfazea</h2>
-    <img alt="Tonun puruen gehiketa libreko interfazea" src="images/image4.png" style="width: 602.00px; height: 836.00px; margin-left: 0.00px; margin-top: 0.00px;">
-    <ol>
-        <li>
-            <b>Aurrebista-leihoa:</b> Modulua sortuko duen seinalea aurreikupena erakusten du. Parametro baten balioa aldatzean eguneratzen da.</li>
-        <li>
-            <b>Maiztasun-hautagailua:</b> Sei osagai bakoitzaren <a href="#frequency">maiztasuna</a> hautatzea ahalbidetzen du. Hautatzeko, testu-kutxaren barnean idatzi edo gezien gainean klik egin ahal da.</li>
-        <li>
-            <b>Anplitude-hautagailua:</b> Sei osagai bakoitzaren <a href="#amplitude">anplitudea</a> hautatzea ahalbidetzen du. Kursorea mugituz hautatu ahal da.</li>
-        <li>
-            <b>"Sortu" botoia:</b> Bistaratze-leiho berri bat irekitzen du, hautatutako parametroekin sortutako seinale bat, segundu bateko iraupena duena, aztertzeko.</li>
-        <li>
-            <b>Zortziduna:</b> Teklatuko noten zortziduna aukeratzeko.</li>
-        <li>
-            <b>Teklatua:</b> Nota bat aukeratzea ahalbidetzen du. Nota bat hautatzean, lehenengo sei <a href="#harmonics">harmoniko</a> bakoitzaren maiztasuna egokituko zaio osagai bakoitzari, anplitude predeterminatu batekin.</li>
-    </ol>
+                                                     <body>
+                                                         <h1>Tonu puruen gehiketa librea</h1>
+                                                         <p>Modulu honek sei <a href="#pure_tone">tonu puru</a> gainjarri arte sortu ahal ditu, bakoitzak <a href="#frequency">maiztasun</a> eta <a href="#amplitude">anplitude</a> ezberdinarekin. Azpialdeko teklatuarekin nota bat aukeratu ahal da, bere lehenengo sei <a href="#harmonics">harmonikoak</a> ikusteko.</p>
+                                                         <h2>Interfazea</h2>
+                                                         <img alt="Tonu puruen gehiketa libre egiteko interfazea" src="images/harmonics_eus.png" style="width: 602.00px; margin-left: 0.00px; margin-top: 0.00px;">
+                                                         <ol>
+                                                             <li>
+                                                                 <b>Aurrebista-leihoa:</b> Modulua sortuko duen seinalea aurreikupena erakusten du. Parametro baten balioa aldatzean eguneratzen da.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Maiztasun-hautagailua:</b> Sei osagai bakoitzaren <a href="#frequency">maiztasuna</a> hautatzea ahalbidetzen du. Hautatzeko, testu-kutxaren barnean idatzi edo gezien gainean klik egin ahal da.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Anplitude-hautagailua:</b> Sei osagai bakoitzaren <a href="#amplitude">anplitudea</a> hautatzea ahalbidetzen du. Kursorea mugituz hautatu ahal da.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Iraupen-hautagailua:</b> Seinalearen iraupena 1 eta 30 segunduen artean hautatzea ahalbidetzen du. Balioa kursorea mugitzen edo testu-kutxaren balioa aldatzen hautatu ahal da.
+                                                             </li>
+                                                             <li>
+                                                                 <b>"Sortu" botoia:</b> Bistaratze-leiho berri bat irekitzen du, hautatutako parametroekin sortutako seinale bat aztertzeko.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Erreprodukzio-botoiak:</b> Audio-seinalearen erreprodukzioa kontrolatzea ahalbidetzen dute.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Zortziduna:</b> Teklatuko noten zortziduna aukeratzeko.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Teklatua:</b> Nota bat aukeratzea ahalbidetzen du. Nota bat hautatzean, lehenengo sei <a href="#harmonics">harmoniko</a> bakoitzaren maiztasuna egokituko zaio osagai bakoitzari, anplitude predeterminatu batekin.
+                                                             </li>
+                                                         </ol>
 
-    <h2 id="harmonics">Harmonikoak</h2>
-    <p>Harmonikoak, nota bat ematean, naturalki sortzen diren gehiegarrizko <a href="#pure_tone">tonu puruak</a> dira. Bakoitzaren maiztasuna oinarrizko maiztasuna (emandako notaren maiztasuna) eta zenbaki natural (1, 2, 3, 4...) baten arteko biderkadura da.<br>
-        <br>Armoniko bakoitzako anplitudearen arabera, soinuaren tinbrea aldatuko da.<br>
-        <br>Horrela, Do3-ren (130.813 Hz) harmonikoak honako hauek dira:<br>
-        <br>
-    </p>
+                                                         <h2 id="harmonics">Harmonikoak</h2>
+                                                         <p>
+                                                             Harmonikoak, nota bat ematean, naturalki sortzen diren gehiegarrizko <a href="#pure_tone">tonu puruak</a> dira. Bakoitzaren maiztasuna oinarrizko maiztasuna (emandako notaren maiztasuna) eta zenbaki natural (1, 2, 3, 4...) baten arteko biderkadura da.<br>
+                                                             <br>Armoniko bakoitzako anplitudearen arabera, soinuaren tinbrea aldatuko da.<br>
+                                                             <br>Horrela, Do3-ren (130.813 Hz) harmonikoak honako hauek dira:<br>
+                                                             <br>
+                                                         </p>
 
-    <table class="table_harmonics">
-        <tbody>
-            <tr class="table_title">
-                <td colspan="1" rowspan="1">
-                    <p class="title_text">
-                        <span>Harmonikoen maila</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1" class="center_td">
-                    <p class="title_text">
-                        <span>Maiztasuna (Hz)</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p class="title_text">
-                        <span>Nota</span>
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>1 (Oinarrizko maiztasuna)</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1" class="center_td">
-                    <p class="table_text">
-                        <span>130.813</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>Do3</span>
-                    </p>
-                </td>
-            </tr>
-            <tr class="row_green">
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>2</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1" class="center_td">
-                    <p class="table_text">
-                        <span>130.813 · 2 = 261,626</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>Do4</span>
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>3</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1" class="center_td">
-                    <p class="table_text">
-                        <span>130.813 · 3 = 392,439</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>Sol4</span>
-                    </p>
-                </td>
-            </tr>
-            <tr class="row_green">
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>4</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1" class="center_td">
-                    <p class="table_text">
-                        <span>130.813 · 4 = 523,252</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span class="c15">Do5</span>
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>5</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1" class="center_td">
-                    <p class="table_text">
-                        <span>130.813 · 5 = 654.065</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>Mi5</span>
-                    </p>
-                </td>
-            </tr>
-            <tr class="row_green">
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>6</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1" class="center_td">
-                    <p class="table_text">
-                        <span>130.813 · 6 = 784,878</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>Sol5</span>
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>7</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1" class="center_td">
-                    <p class="table_text">
-                        <span>130.813 · 7 = 915,691</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>Sib5 (Beherantz tonutik kanpo)</span>
-                    </p>
-                </td>
-            </tr>
-            <tr class="row_green">
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>...</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1" class="center_td">
-                    <p class="table_text">
-                        <span>...</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>...</span>
-                    </p>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                                                         <table class="table_harmonics">
+                                                             <tbody>
+                                                                 <tr class="table_title">
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="title_text">
+                                                                             <span>Harmonikoen maila</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1" class="center_td">
+                                                                         <p class="title_text">
+                                                                             <span>Maiztasuna (Hz)</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="title_text">
+                                                                             <span>Nota</span>
+                                                                         </p>
+                                                                     </td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>1 (Oinarrizko maiztasuna)</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1" class="center_td">
+                                                                         <p class="table_text">
+                                                                             <span>130.813</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>Do3</span>
+                                                                         </p>
+                                                                     </td>
+                                                                 </tr>
+                                                                 <tr class="row_green">
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>2</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1" class="center_td">
+                                                                         <p class="table_text">
+                                                                             <span>130.813 · 2 = 261,626</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>Do4</span>
+                                                                         </p>
+                                                                     </td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>3</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1" class="center_td">
+                                                                         <p class="table_text">
+                                                                             <span>130.813 · 3 = 392,439</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>Sol4</span>
+                                                                         </p>
+                                                                     </td>
+                                                                 </tr>
+                                                                 <tr class="row_green">
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>4</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1" class="center_td">
+                                                                         <p class="table_text">
+                                                                             <span>130.813 · 4 = 523,252</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span class="c15">Do5</span>
+                                                                         </p>
+                                                                     </td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>5</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1" class="center_td">
+                                                                         <p class="table_text">
+                                                                             <span>130.813 · 5 = 654.065</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>Mi5</span>
+                                                                         </p>
+                                                                     </td>
+                                                                 </tr>
+                                                                 <tr class="row_green">
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>6</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1" class="center_td">
+                                                                         <p class="table_text">
+                                                                             <span>130.813 · 6 = 784,878</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>Sol5</span>
+                                                                         </p>
+                                                                     </td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>7</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1" class="center_td">
+                                                                         <p class="table_text">
+                                                                             <span>130.813 · 7 = 915,691</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>Sib5 (Beherantz tonutik kanpo)</span>
+                                                                         </p>
+                                                                     </td>
+                                                                 </tr>
+                                                                 <tr class="row_green">
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>...</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1" class="center_td">
+                                                                         <p class="table_text">
+                                                                             <span>...</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>...</span>
+                                                                         </p>
+                                                                     </td>
+                                                                 </tr>
+                                                             </tbody>
+                                                         </table>
 
-    <h2 id="pure_tone">Tonu purua</h2>
-    <p>Tonu puru bat seinale sinusoide bat da, maiztasun bakarra duena. Modulu honetan sortzen da cosinu funtzioa erabiliz, eta hurrengo formularekin adierazten da:</p>
-    <p class="formula">A cos(2πft + 𝜙),</p>
+                                                         <h2 id="pure_tone">Tonu purua</h2>
+                                                         <p>Tonu puru bat seinale sinusoide bat da, maiztasun bakarra duena. Modulu honetan sortzen da cosinu funtzioa erabiliz, eta hurrengo formularekin adierazten da:</p>
+                                                         <p class="formula">A cos(2πft + 𝜙),</p>
 
-    <p>non <i>A</i> anplitudea, <i>f</i> maiztasuna <i>𝜙</i> fasea den.</p>
+                                                         <p>non <i>A</i> anplitudea, <i>f</i> maiztasuna <i>𝜙</i> fasea den.</p>
 
-    <ul>
-        <li>
-            <b id="amplitude">Anplitudea:</b> Seinalearen gehienezko balioa da.<table>
-                <tbody><tr>
-                    <td>
-                        <img alt="Anplitudeko adibidea" src="images/image2.png" style="width: 602.00px; height: 206.67px; margin-left: 0.00px; margin-top: 0.00px;">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Adibide honetan anplitudea 0.5 da.
-</td>
-                </tr>
-            </tbody></table>
-        </li>
-        <li>
-            <b id="frequency">Maiztasuna:</b> Denbora tarte batean seinale-ziklo oso bat zebat aldiz errepikatzen den adierazten du. Hertzetan neurrituta, segundu batean seinale-ziklo baten errepikapen kopurua.<table>
-                <tbody><tr>
-                    <td>
-                        <img alt="Maiztasuneko adibidea" src="images/image1.png" style="width: 602.00px; height: 206.67px; margin-left: 0.00px; margin-top: 0.00px;">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Adibide honetan maiztasuna 2 Hz-ekoa da.
-                    </td>
-                </tr>
-            </tbody></table>
-        </li>
-        <li>
-            <b id="phase">Fasea:</b> Cosinuaren desplazamendua. Radianetan neurtzen da, seinale-ziklo oso bat 2π radian izanez.<table>
-                <tbody><tr>
-                    <td>
-                        <img alt="Faseko adibidea" src="images/image3.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Adibide honetan seinalea ziklo ¼-a desplazatuta dago. Beraz, fasea  π/2 rad-ekoa da.
-</td>
-                </tr>
-            </tbody></table>
-        </li>
-    </ul>
+                                                         <ul>
+                                                             <li>
+                                                                 <b id="amplitude">Anplitudea:</b> Seinalearen gehienezko balioa da.<table>
+                                                                     <tbody>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 <img alt="Anplitudeko adibidea" src="images/image2.png" style="width: 602.00px; height: 206.67px; margin-left: 0.00px; margin-top: 0.00px;">
+                                                                             </td>
+                                                                         </tr>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 Adibide honetan anplitudea 0.5 da.
+                                                                             </td>
+                                                                         </tr>
+                                                                     </tbody>
+                                                                 </table>
+                                                             </li>
+                                                             <li>
+                                                                 <b id="frequency">Maiztasuna:</b> Denbora tarte batean seinale-ziklo oso bat zebat aldiz errepikatzen den adierazten du. Hertzetan neurrituta, segundu batean seinale-ziklo baten errepikapen kopurua.<table>
+                                                                     <tbody>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 <img alt="Maiztasuneko adibidea" src="images/image1.png" style="width: 602.00px; height: 206.67px; margin-left: 0.00px; margin-top: 0.00px;">
+                                                                             </td>
+                                                                         </tr>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 Adibide honetan maiztasuna 2 Hz-ekoa da.
+                                                                             </td>
+                                                                         </tr>
+                                                                     </tbody>
+                                                                 </table>
+                                                             </li>
+                                                             <li>
+                                                                 <b id="phase">Fasea:</b> Cosinuaren desplazamendua. Radianetan neurtzen da, seinale-ziklo oso bat 2π radian izanez.<table>
+                                                                     <tbody>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 <img alt="Faseko adibidea" src="images/image3.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
+                                                                             </td>
+                                                                         </tr>
+                                                                         <tr>
+                                                                             <td>
+                                                                                 Adibide honetan seinalea ziklo ¼-a desplazatuta dago. Beraz, fasea  π/2 rad-ekoa da.
+                                                                             </td>
+                                                                         </tr>
+                                                                     </tbody>
+                                                                 </table>
+                                                             </li>
+                                                         </ul>
 
-</body></html>
+                                                     </body></html>

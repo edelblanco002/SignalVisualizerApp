@@ -69,13 +69,13 @@
     </p>
     <h2>Interface</h2>
     <p><b>Fourier Transform</b></p><br />
-    <img alt="Fourier transform interface" src="images/image8.png" style="width: 602.00px; height: 342.67px; margin-left: 0.00px; margin-top: 0.00px;">
+    <img alt="Fourier transform interface" src="images/visualization1_en.png" style="width: 602.00px; margin-left: 0.00px; margin-top: 0.00px;">
     <p>
         It allows to observe the <a href="#fourier_transform">Fourier Transform</a> of the audio signal.
     </p>
     <ol>
         <li>
-            <b>Signal View:</b> Displays the loaded audio signal in the display window.
+            <b>Waveform view:</b> Displays the loaded audio signal in the display window.
         </li>
         <li>
             <b>Playback buttons:</b> They allow to control the playback of the audio signal.
@@ -92,19 +92,7 @@
             </ol>
         </li>
         <li>
-            <b>Export image:</b> By clicking on this button a drop-down list appears with three options.<br /><br />
-            <img alt="Export image interface" src="images/image5.png" style="width: 32.00px; height: 84.00px; margin-left: 100pt; margin-top: 0.00px;">
-            <ol type="a">
-                <li>
-                    The upper button allows to save the image.
-                </li>
-                <li>
-                    The central button copies the image as a bitmap.
-                </li>
-                <li>
-                    The lower button copies the image as a vector image.
-                </li>
-            </ol>
+            <b>Export button:</b> It allows to export the signal or the spectrum as a <i>.csv</i> or <i>.xls</i> file. The signal can be saved as a <i>.wav</i> sound file.<br /><br />
         </li>
         <li>
             <b>Signal navigation panel</b><br /><br />
@@ -125,6 +113,9 @@
             </ol>
         </li>
         <li>
+            <b>View switching buttons:</b> They allow to enlarge one of the plots.
+        </li>
+        <li>
             <b>Spectral information view:</b> Here you can see the spectral information of the signal, obtained by the selected method.
         </li>
         <li>
@@ -132,6 +123,19 @@
         </li>
         <li>
             <b>Mode selection:</b> Allows to select the method by which the spectral information of the signal is obtained.
+        </li>
+        <li>
+            <b>Sampling rate:</b> It shows the sampling rate of the loaded signal.
+        </li>
+    </ol>
+
+    <p><b>Right button:</b> When you click with the right button over a plot, a menu is shown. There you can:</p>
+    <ol type="a">
+        <li>
+            Export plot as image.
+        </li>
+        <li>
+            Change the scale of the amplitude axis between lineal or logarithmic.
         </li>
     </ol>
 
@@ -141,9 +145,9 @@
         It allows to observe the <a href="#stft">Short Time Fourier Transform (STFT)</a> of the audio signal.<br /><br />
     </p>
 
-    <img alt="STFT interface" src="images/image13.png" style="width: 602.00px; height: 352.00px; margin-left: 0.00px; margin-top: 0.00px;">
+    <img alt="STFT interface" src="images/visualization2_en.png" style="width: 602.00px; height: 352.00px; margin-left: 0.00px; margin-top: 0.00px;">
 
-    <ol start="8">
+    <ol start="10">
         <li>
             <b>Window:</b> Window used to calculate the STFT. You can change its position by clicking on the signal.
         </li>
@@ -161,14 +165,14 @@
     <p>
         It allows to see the <a href="#spectrogram">spectrogram</a> of the signal.<br /><br />
     </p>
-    <img alt="Spectrogram interface" src="images/image7.png" style="width: 602.00px; height: 352.00px; margin-left: 0.00px; margin-top: 0.00px;">
+    <img alt="Spectrogram interface" src="images/visualization3_en.png" style="width: 602.00px; height: 352.00px; margin-left: 0.00px; margin-top: 0.00px;">
 
     <p><b>STFT + Spectrogram</b></p>
 
     <p>
         It allows to observe the <a href="#stft">STFT</a> of the signal and to see its position in the <a href="#spectrogram">spectrogram</a>. <br /><br />
     </p>
-    <img alt="Spectrogram interface" src="images/image4.png" style="width: 602.00px; height: 352.00px; margin-left: 0.00px; margin-top: 0.00px;">
+    <img alt="Spectrogram interface" src="images/visualization4_en.png" style="width: 602.00px; height: 352.00px; margin-left: 0.00px; margin-top: 0.00px;">
     <h2 id="fourier_transform">Fourier Transform</h2>
     <p>
         The Fourier Transform is a mathematical transformation used to transform signals in the time domain (in this case, the audio signal) to the frequency domain. The result shows the frequency content of the signal. In short, it is an approach to breaking down a signal into a sum of several pure tones of different frequencies.

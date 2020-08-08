@@ -105,246 +105,261 @@
         }
     </style>
 </head>
-<body>
-    <h1>Suma libre de tonos puros</h1>
-    <p>Este módulo permite generar hasta seis <a href="#pure_tone">tonos puros</a> superpuestos, cada uno de diferente <a href="#frequency">frecuencia</a> y <a href="#amplitude">amplitud</a>. El teclado de la parte inferior permite seleccionar una nota para observar sus seis primeros <a href="#harmonics">armónicos</a>.
-    </p>
-    <h2>Interfaz</h2>
-    <img alt="Interfaz suma libre de tonos puros" src="images/image4.png" style="width: 602.00px; height: 836.00px; margin-left: 0.00px; margin-top: 0.00px;">
-    <ol>
-        <li>
-            <b>Ventana de previsualización:</b> Permite ver la señal que generará el módulo. Se actualiza al cambiar el valor de algún parámetro.</li>
-        <li>
-            <b>Selector de frecuencia:</b> Permite seleccionar la <a href="#frequency">frecuencia</a> de cada una de las seis componentes. Se puede seleccionar escribiendo en la caja de texto o clicando sobre las flechas.</li>
-        <li>
-            <b>Selector de amplitud:</b> Permite seleccionar la <a href="#amplitude">amplitud</a> de cada una de las seis componentes. Se puede seleccionar desplazando el cursor.</li>
-        <li>
-            <b>Botón "Generar":</b> Abre una nueva ventana de visualización para observar una señal con los parámetros seleccionados, de 1 segundo de duración.</li>
-        <li>
-            <b>Octava:</b> Permite seleccionar la octava de las notas del teclado.</li>
-        <li>
-            <b>Teclado:</b> Permite seleccionar una nota. Al seleccionar una nota, se le asignará a cada una de las seis componentes las frecuencias de sus seis primeros <a href="#harmonics">armónicos</a>, con una amplitud predeterminada.</li>
-    </ol>
+                                                     <body>
+                                                         <h1>Suma libre de tonos puros</h1>
+                                                         <p>
+                                                             Este módulo permite generar hasta seis <a href="#pure_tone">tonos puros</a> superpuestos, cada uno de diferente <a href="#frequency">frecuencia</a> y <a href="#amplitude">amplitud</a>. El teclado de la parte inferior permite seleccionar una nota para observar sus seis primeros <a href="#harmonics">armónicos</a>.
+                                                         </p>
+                                                         <h2>Interfaz</h2>
+                                                         <img alt="Free addition of pure tones interface" src="images/harmonics_es.png" style="width: 602.00px; margin-left: 0.00px; margin-top: 0.00px;">
+                                                         <ol>
+                                                             <li>
+                                                                 <b>Ventana de previsualización:</b> Permite ver la señal que generará el módulo. Se actualiza al cambiar el valor de algún parámetro.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Selector de frecuencia:</b> Permite seleccionar la <a href="#frequency">frecuencia</a> de cada una de las seis componentes. Se puede seleccionar escribiendo en la caja de texto o clicando sobre las flechas.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Selector de amplitud:</b> Permite seleccionar la <a href="#amplitude">amplitud</a> de cada una de las seis componentes. Se puede seleccionar desplazando el cursor.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Selector de duración:</b> Permite variar la duración de la señal entre 1 y 30 segundos. El valor se puede cambiar deslizando el cursor o modificando el valor de la caja de texto.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Botón "Generar":</b> Abre una nueva ventana de visualización para observar una señal con los parámetros seleccionados.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Botones de reproducción:</b> Permiten reproducir o detener la reproducción de la señal.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Octava:</b> Permite seleccionar la octava de las notas del teclado.
+                                                             </li>
+                                                             <li>
+                                                                 <b>Teclado:</b> Permite seleccionar una nota. Al seleccionar una nota, se le asignará a cada una de las seis componentes las frecuencias de sus seis primeros <a href="#harmonics">armónicos</a>, con una amplitud predeterminada.
+                                                             </li>
+                                                         </ol>
 
-    <h2 id="harmonics">Armónicos</h2>
-    <p>Los armónicos son  <a href="#pure_tone">tonos puros</a> adicionales que surgen de forma natural al emitir una nota. La frecuencia de cada uno viene determinada por el producto de la frecuencia fundamental (frecuencia de la nota emitida) y un número natural (1, 2, 3, 4...).<br>
-        <br>En función de la amplitud que tengan cada uno de sus armónicos, el timbre del sonido cambia.<br>
-        <br>De esta forma, los armónicos de un Do3 (130.813 Hz) son los siguientes:<br>
-        <br>
-    </p>
+                                                         <h2 id="harmonics">Armónicos</h2>
+                                                         <p>
+                                                             Los armónicos son  <a href="#pure_tone">tonos puros</a> adicionales que surgen de forma natural al emitir una nota. La frecuencia de cada uno viene determinada por el producto de la frecuencia fundamental (frecuencia de la nota emitida) y un número natural (1, 2, 3, 4...).<br>
+                                                             <br>En función de la amplitud que tengan cada uno de sus armónicos, el timbre del sonido cambia.<br>
+                                                             <br>De esta forma, los armónicos de un Do3 (130.813 Hz) son los siguientes:<br>
+                                                             <br>
+                                                         </p>
 
-    <table class="table_harmonics">
-        <tbody>
-            <tr class="table_title">
-                <td colspan="1" rowspan="1">
-                    <p class="title_text">
-                        <span>Orden del armónico</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1" class="center_td">
-                    <p class="title_text">
-                        <span>Frecuencia (Hz)</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p class="title_text">
-                        <span>Nota</span>
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>1 (Frecuencia fundamental)</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1" class="center_td">
-                    <p class="table_text">
-                        <span>130.813</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>Do3</span>
-                    </p>
-                </td>
-            </tr>
-            <tr class="row_green">
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>2</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1" class="center_td">
-                    <p class="table_text">
-                        <span>130.813 · 2 = 261,626</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>Do4</span>
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>3</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1" class="center_td">
-                    <p class="table_text">
-                        <span>130.813 · 3 = 392,439</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>Sol4</span>
-                    </p>
-                </td>
-            </tr>
-            <tr class="row_green">
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>4</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1" class="center_td">
-                    <p class="table_text">
-                        <span>130.813 · 4 = 523,252</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span class="c15">Do5</span>
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>5</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1" class="center_td">
-                    <p class="table_text">
-                        <span>130.813 · 5 = 654.065</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>Mi5</span>
-                    </p>
-                </td>
-            </tr>
-            <tr class="row_green">
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>6</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1" class="center_td">
-                    <p class="table_text">
-                        <span>130.813 · 6 = 784,878</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>Sol5</span>
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>7</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1" class="center_td">
-                    <p class="table_text">
-                        <span>130.813 · 7 = 915,691</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>Sib5 (desafinado hacia abajo)
+                                                         <table class="table_harmonics">
+                                                             <tbody>
+                                                                 <tr class="table_title">
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="title_text">
+                                                                             <span>Orden del armónico</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1" class="center_td">
+                                                                         <p class="title_text">
+                                                                             <span>Frecuencia (Hz)</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="title_text">
+                                                                             <span>Nota</span>
+                                                                         </p>
+                                                                     </td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>1 (Frecuencia fundamental)</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1" class="center_td">
+                                                                         <p class="table_text">
+                                                                             <span>130.813</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>Do3</span>
+                                                                         </p>
+                                                                     </td>
+                                                                 </tr>
+                                                                 <tr class="row_green">
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>2</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1" class="center_td">
+                                                                         <p class="table_text">
+                                                                             <span>130.813 · 2 = 261,626</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>Do4</span>
+                                                                         </p>
+                                                                     </td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>3</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1" class="center_td">
+                                                                         <p class="table_text">
+                                                                             <span>130.813 · 3 = 392,439</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>Sol4</span>
+                                                                         </p>
+                                                                     </td>
+                                                                 </tr>
+                                                                 <tr class="row_green">
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>4</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1" class="center_td">
+                                                                         <p class="table_text">
+                                                                             <span>130.813 · 4 = 523,252</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span class="c15">Do5</span>
+                                                                         </p>
+                                                                     </td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>5</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1" class="center_td">
+                                                                         <p class="table_text">
+                                                                             <span>130.813 · 5 = 654.065</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>Mi5</span>
+                                                                         </p>
+                                                                     </td>
+                                                                 </tr>
+                                                                 <tr class="row_green">
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>6</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1" class="center_td">
+                                                                         <p class="table_text">
+                                                                             <span>130.813 · 6 = 784,878</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>Sol5</span>
+                                                                         </p>
+                                                                     </td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>7</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1" class="center_td">
+                                                                         <p class="table_text">
+                                                                             <span>130.813 · 7 = 915,691</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>
+                                                                                 Sib5 (desafinado hacia abajo)
 
-</span>
-                    </p>
-                </td>
-            </tr>
-            <tr class="row_green">
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>...</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1" class="center_td">
-                    <p class="table_text">
-                        <span>...</span>
-                    </p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p class="table_text">
-                        <span>...</span>
-                    </p>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                                                                             </span>
+                                                                         </p>
+                                                                     </td>
+                                                                 </tr>
+                                                                 <tr class="row_green">
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>...</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1" class="center_td">
+                                                                         <p class="table_text">
+                                                                             <span>...</span>
+                                                                         </p>
+                                                                     </td>
+                                                                     <td colspan="1" rowspan="1">
+                                                                         <p class="table_text">
+                                                                             <span>...</span>
+                                                                         </p>
+                                                                     </td>
+                                                                 </tr>
+                                                             </tbody>
+                                                         </table>
 
-    <h2 id="pure_tone">Tono puro</h2>
-    <p>Un tono puro es una señal sinusoidal que tiene una única frecuencia. En este módulo se genera utilizando la función coseno, y se expresa mediante la siguiente fórmula:</p>
-    <p class="formula">A cos(2πft + 𝜙),</p>
+                                                         <h2 id="pure_tone">Tono puro</h2>
+                                                         <p>Un tono puro es una señal sinusoidal que tiene una única frecuencia. En este módulo se genera utilizando la función coseno, y se expresa mediante la siguiente fórmula:</p>
+                                                         <p class="formula">A cos(2πft + 𝜙),</p>
 
-    <p>siendo <i>A</i> la amplitud, <i>f</i> la frecuencia y <i>𝜙</i> la fase.</p>
+                                                         <p>siendo <i>A</i> la amplitud, <i>f</i> la frecuencia y <i>𝜙</i> la fase.</p>
 
-    <ul>
-        <li>
-            <b id="amplitude">Amplitud:</b>Valor máximo de la señal.
-            <table>
-                <tr>
-                    <td>
-                        <img alt="Ejemplo amplitud" src="images/image2.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        En este ejemplo la amplitud es 0.5.
-                    </td>
-                </tr>
-            </table>
-</li>
-        <li>
-            <b id="frequency">Frecuencia:</b>Número de veces que se repite un ciclo entero de la señal dentro de una unidad de tiempo. Medido en Hercios (Hz) es el número de veces que se repite un ciclo de la señal en 1 segundo.
-            <table>
-                <tr>
-                    <td>
-                        <img alt="Ejemplo frecuencia" src="images/image3.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        En este ejemplo la frecuencia es 2 Hz.
-                    </td>
-                </tr>
-            </table>
-        </li>
-        <li>
-            <b id="phase">Fase:</b> Desplazamiento del coseno. Se mide en radianes, siendo 2π radianes un ciclo completo de la señal.
-            <table>
-                <tr>
-                    <td>
-                        <img alt="Ejemplo fase" src="images/image1.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        En este ejemplo la señal está desplazada ¼ de ciclo, por lo que la fase es π/2 rad.
-                    </td>
-                </tr>
-            </table>
-        </li>
-    </ul>
+                                                         <ul>
+                                                             <li>
+                                                                 <b id="amplitude">Amplitud:</b>Valor máximo de la señal.
+                                                                 <table>
+                                                                     <tr>
+                                                                         <td>
+                                                                             <img alt="Ejemplo amplitud" src="images/image2.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
+                                                                         </td>
+                                                                     </tr>
+                                                                     <tr>
+                                                                         <td>
+                                                                             En este ejemplo la amplitud es 0.5.
+                                                                         </td>
+                                                                     </tr>
+                                                                 </table>
+                                                             </li>
+                                                             <li>
+                                                                 <b id="frequency">Frecuencia:</b>Número de veces que se repite un ciclo entero de la señal dentro de una unidad de tiempo. Medido en Hercios (Hz) es el número de veces que se repite un ciclo de la señal en 1 segundo.
+                                                                 <table>
+                                                                     <tr>
+                                                                         <td>
+                                                                             <img alt="Ejemplo frecuencia" src="images/image3.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
+                                                                         </td>
+                                                                     </tr>
+                                                                     <tr>
+                                                                         <td>
+                                                                             En este ejemplo la frecuencia es 2 Hz.
+                                                                         </td>
+                                                                     </tr>
+                                                                 </table>
+                                                             </li>
+                                                             <li>
+                                                                 <b id="phase">Fase:</b> Desplazamiento del coseno. Se mide en radianes, siendo 2π radianes un ciclo completo de la señal.
+                                                                 <table>
+                                                                     <tr>
+                                                                         <td>
+                                                                             <img alt="Ejemplo fase" src="images/image1.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
+                                                                         </td>
+                                                                     </tr>
+                                                                     <tr>
+                                                                         <td>
+                                                                             En este ejemplo la señal está desplazada ¼ de ciclo, por lo que la fase es π/2 rad.
+                                                                         </td>
+                                                                     </tr>
+                                                                 </table>
+                                                             </li>
+                                                         </ul>
 
-</body></html>
+                                                     </body></html>

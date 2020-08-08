@@ -66,7 +66,7 @@
     <p>Esta ventana permite analizar el espectro de la señal elegida mediante diferentes métodos: <a href="#fourier_transform">Transformada de Fourier</a>, <a href="#stft">Transformada de Fourier a Corto Plazo</a> y <a href="#spectrogram">espectrograma</a>.</p>
     <h2>Interfaz</h2>
     <p><b>Transformada de Fourier</b></p><br>
-    <img alt="Interfaz transformada de Fourier" src="images/image6.png" style="width: 602.00px; height: 342.67px; margin-left: 0.00px; margin-top: 0.00px;">
+    <img alt="Interfaz transformada de Fourier" src="images/visualization1_es.png" style="width: 602.00px; margin-left: 0.00px; margin-top: 0.00px;">
     <p>Permite observar la <a href="#fourier_transform">Transformada de Fourier</a> de la señal de audio.</p>
     <ol>
         <li>
@@ -75,25 +75,13 @@
             <b>Botones de reproducción:</b> Permiten controlar la reproducción de la señal de audio.<ol type="a">
                 <li>El botón de la derecha inicia la reproducción desde el comienzo de la señal.</li>
                 <li>El botón del centro inicia la reproducción a partir del cursor colocado haciendo clic sobre la señal.</li>
-                <li>El botón de la izquierda detiene la reproducción.
-
-        </li>
+                <li>
+                    El botón de la izquierda detiene la reproducción.
+                </li>
             </ol>
         </li>
         <li>
-            <b>Exportar imagen:</b> Clicando sobre este botón aparece una lista desplegable con tres opciones.<br><br>
-            <img alt="Interfaz exportar imagen" src="images/image9.png" style="width: 32.00px; height: 84.00px; margin-left: 0.00px; margin-top: 0.00px;">
-            <ol type="a">
-                <li>El botón superior permite guardar la imagen.
-
-                </li>
-                <li>El botón central copia la imagen como un mapa de bits.
-
-                </li>
-                <li>El botón inferior copia la imagen como una imagen vectorial.
-
-                </li>
-            </ol>
+            <b>Botón de exportación:</b> Permite exportar la señal o el experto a un fichero <i>.csv</i> o <i>.xls</i>. La señal puede ser guardada como un fichero de sonido <i>.wav</i>.
         </li>
         <li>
             <b>Panel de navegación de la señal</b>
@@ -111,11 +99,27 @@
             </ol>
         </li>
         <li>
+            <b>Cambiar vista:</b> Estos botones permiten agrandar uno de los gráficos.
+        </li>
+        <li>
             <b>Vista de la información espectral:</b> Aquí se puede observar la información espectral de la señal, obtenida mediante el método seleccionado.</li>
         <li>
             <b>Panel de navegación de la información espectral:</b> Sirve para navegar por la vista de la información espectral. Funciona de la misma forma que el panel de navegación de la señal.</li>
         <li>
             <b>Selección del modo:</b> Permite seleccionar el método con el que se obtiene la información espectral de la señal.</li>
+        <li>
+            <b>Frecuencia de muestreo:</b> Muestra la frecuencia de muestreo de la señal cargada.
+        </li>
+    </ol>
+
+    <p><b>Botón derecho:</b> Cuando haces clic sobre uno de los gráficos aparece un menú. Con el se puede:</p>
+    <ol type="a">
+        <li>
+            Exportar el gráfico como una imagen.
+        </li>
+        <li>
+            Cambiar la escala del eje de amplitud entre lineal y logarítmica.
+        </li>
     </ol>
 
     <p><b>STFT</b></p>
@@ -123,8 +127,8 @@
     <p>Permite observar la <a href="#stft">Transformada de Fourier a Corto Plazo (STFT)</a> de la señal de audio.<br><br>
     </p>
 
-    <img alt="Interfaz STFT" src="images/image10.png" style="width: 602.00px; height: 352.00px; margin-left: 0.00px; margin-top: 0.00px;">
-    <ol start="8">
+    <img alt="Interfaz STFT" src="images/visualization2_es.png" style="width: 602.00px; margin-left: 0.00px; margin-top: 0.00px;">
+    <ol start="10">
         <li>
             <b>Ventana:</b> Ventana utilizada para calcular la STFT. Se puede cambiar su posición haciendo clic sobre la señal.
 </li>
@@ -132,19 +136,21 @@
             <b>Selector de forma de ventana</b>
         </li>
         <li>
-            <b>Selector de tamaño de ventana:</b> Permite introducir el tamaño de la ventana en segundos (entre 0.001 y 1).</li>
+            <b>Selector de tamaño de ventana:</b> Permite introducir el tamaño de la ventana en segundos (entre 0.001 y 1).
+        </li>
         <li>
-            <b>Selector de nfft:</b> Permite seleccionar el número de puntos de la transformada entre las opciones disponibles.</li>
+            <b>Selector de nfft:</b> Permite seleccionar el número de puntos de la transformada entre las opciones disponibles.
+        </li>
     </ol>
     <p><b>Espectograma</b></p>
     <p>Permite ver el <a href="#spectrogram">espectrograma</a> de la señal.<br><br>
     </p>
-    <img alt="Interfaz espectrograma" src="images/image7.png" style="width: 602.00px; height: 352.00px; margin-left: 0.00px; margin-top: 0.00px;">
+    <img alt="Interfaz espectrograma" src="images/visualization3_es.png" style="width: 602.00px; margin-left: 0.00px; margin-top: 0.00px;">
     <p><b>STFT + Espectrograma</b></p>
 
     <p>Permite observar la <a href="#stft">STFT</a> de la señal y ver su posición en el <a href="#spectrogram">espectrograma</a>. <br><br>
     </p>
-    <img alt="Interfaz SFTF + espectrograma" src="images/image3.png" style="width: 602.00px; height: 352.00px; margin-left: 0.00px; margin-top: 0.00px;">
+    <img alt="Interfaz SFTF + espectrograma" src="images/visualization4_es.png" style="width: 602.00px; margin-left: 0.00px; margin-top: 0.00px;">
     <h2 id="fourier_transform">Transformada de Fourier</h2>
     <p>La Transformada de Fourier es una transformación matemática utilizada para transformar señales en el dominio del tiempo (en este caso, la señal de audio) al  dominio de la frecuencia. El resultado muestra el contenido frecuencial de la señal. En resumen, es una aproximación a descomponer una señal en una suma de varios tonos puros de diferente frecuencia.</p>
     <img src="images/ft_formula.png" alt="TF formula" style="margin-left: 100pt">

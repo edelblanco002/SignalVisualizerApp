@@ -59,24 +59,39 @@
 </head>
 <body>
     <h1>Generar diente de sierra</h1>
-    <p>Este módulo permite generar una <a href="#sawtooth_signal">señal de diente de sierra</a> de un segundo de duración, con la posibilidad de modificar los parámetros de <a href="#amplitude">amplitud</a>, <a href="#frequency">frecuencia</a>, <a href="#phase">fase</a> y <a href="#max">posición del máximo</a>.
+    <p>Este módulo permite generar una <a href="#sawtooth_signal">señal de diente de sierra</a>, con la posibilidad de modificar los parámetros de <a href="#amplitude">amplitud</a>, <a href="#frequency">frecuencia</a>, <a href="#phase">fase</a>, <a href="#max">posición del máximo</a> y <a href="#offset">offset</a>.
     </p>
     <h2>Interfaz</h2>
 
-    <img alt="Interfaz generar diente de sierra" src="images/image1.png" style="width: 602.00px; height: 422.67px; margin-left: 0.00px; margin-top: 0.00px;">
+    <img alt="Interfaz generar diente de sierra" src="images/sawtooth_es.png" style="width: 602.00px; margin-left: 0.00px; margin-top: 0.00px;">
     <ol>
         <li>
-            <b>Ventana de previsualización:</b> Permite ver la señal que generará el módulo. Se actualiza al cambiar el valor de algún parámetro.</li>
+            <b>Ventana de previsualización:</b> Permite ver la señal que generará el módulo. Se actualiza al cambiar el valor de algún parámetro.
+        </li>
         <li>
-            <b>Selector de amplitud:</b> Permite variar la <a href="#amplitude">amplitud</a> de la señal de diente de sierra entre 0 y 1. El valor se puede cambiar deslizando el cursor o modificando el valor de la caja de texto.</li>
+            <b>Selector de amplitud:</b> Permite variar la <a href="#amplitude">amplitud</a> de la señal de diente de sierra entre 0 y 1. El valor se puede cambiar deslizando el cursor o modificando el valor de la caja de texto.
+        </li>
         <li>
-            <b>Selector de frecuencia:</b> Permite variar la <a href="#frequency">frecuencia</a> de la señal de diente de sierra entre 1 y 20000 Hz. El valor se puede cambiar deslizando el cursor o modificando el valor de la caja de texto.</li>
+            <b>Selector de frecuencia:</b> Permite variar la <a href="#frequency">frecuencia</a> de la señal de diente de sierra entre 1 y 20000 Hz. El valor se puede cambiar deslizando el cursor o modificando el valor de la caja de texto.
+        </li>
         <li>
-            <b>Selector de fase:</b> Permite variar la <a href="#phase">fase</a> de la señal de diente de sierra entre −π y π radianes. El valor se puede cambiar deslizando el cursor o modificando el valor de la caja de texto.</li>
+            <b>Selector de fase:</b> Permite variar la <a href="#phase">fase</a> de la señal de diente de sierra entre −π y π radianes. El valor se puede cambiar deslizando el cursor o modificando el valor de la caja de texto.
+        </li>
         <li>
-            <b>Selector de posición del máximo:</b> Permite variar la <a href="#max">posición del máximo</a> entre 0 y 1.</li>
+            <b>Selector de posición del máximo:</b> Permite variar la <a href="#max">posición del máximo</a> entre 0 y 1.
+        </li>
         <li>
-            <b>Botón "General":</b> Abre una nueva ventana de visualización para observar una señal con los parámetros seleccionados, de 1 segundo de duración.</li>
+            <b>Selector de duración:</b> Permite variar la duración de la señal entre 1 y 30 segundos. El valor se puede cambiar deslizando el cursor o modificando el valor de la caja de texto.
+        </li>
+        <li>
+            <b>Selector de offset:</b> Permite variar el <a href="#offset">offset</a> entre -2 y 2. El valor se puede cambiar deslizando el cursor o modificando el valor de la caja de texto.
+        </li>
+        <li>
+            <b>Botón "General":</b> Abre una nueva ventana de visualización para observar una señal con los parámetros seleccionados.
+        </li>
+        <li>
+            <b>Botones de reproducción:</b> Permiten reproducir o detener la reproducción de la señal.
+        </li>
     </ol>
 
 
@@ -86,16 +101,19 @@
     <ul>
         <li>
             <b id="amplitude">Amplitud:</b> Valor máximo de la señal.<table>
-                <tbody><tr>
-                    <td>
-                        <img alt="Ejemplo amplitud" src="images/image2.png" style="width: 587.00px; height: 140.00px; margin-left: 0.00px; margin-top: 0.00px;">
-                    </td>
-                </tr>
-                <tr>
-                    <td>En este ejemplo la amplitud es 1.
-</td>
-                </tr>
-            </tbody></table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img alt="Ejemplo amplitud" src="images/image2.png" style="width: 587.00px; height: 140.00px; margin-left: 0.00px; margin-top: 0.00px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            En este ejemplo la amplitud es 1.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </li>
         <li>
             <b id="frequency">Frecuencia:</b> Número de periodos en 1 segundo, medido en Hz. (Para más información, pulsa <a href="#frequency2">aquí</a>).
@@ -105,37 +123,45 @@
         </li>
         <li>
             <b id="max">Posición del máximo:</b> Situación del máximo dentro del periodo (como referencia, tomando el mínimo como comienzo del periodo). 0 representa el inicio del periodo, y 1 el final.<table>
-                <tbody><tr>
-                    <td>
-                        <img alt="Posición del máximo = 1" src="images/image7.png" style="width: 587.00px; height: 140.00px; margin-left: 0.00px; margin-top: 0.00px;">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Posición del máximo: 1
+                <tbody>
+                    <tr>
+                        <td>
+                            <img alt="Posición del máximo = 1" src="images/image7.png" style="width: 587.00px; height: 140.00px; margin-left: 0.00px; margin-top: 0.00px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Posición del máximo: 1
 
-</td>
-                </tr>
-                <tr>
-                    <td>
-                        <img alt="Posición del máximo = 0.5" src="images/image5.png" style="width: 587.00px; height: 140.00px; margin-left: 0.00px; margin-top: 0.00px;">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Posición del máximo: 0.5
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img alt="Posición del máximo = 0.5" src="images/image5.png" style="width: 587.00px; height: 140.00px; margin-left: 0.00px; margin-top: 0.00px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Posición del máximo: 0.5
 
-</td>
-                </tr>
-                <tr>
-                    <td>
-                        <img alt="Posición del máximo = 0" src="images/image3.png" style="width: 587.00px; height: 140.00px; margin-left: 0.00px; margin-top: 0.00px;">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Posición del máximo: 0
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img alt="Posición del máximo = 0" src="images/image3.png" style="width: 587.00px; height: 140.00px; margin-left: 0.00px; margin-top: 0.00px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Posición del máximo: 0
 
-</td>
-                </tr>
-            </tbody></table>                        
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+        <li>
+            <b id="offset">Offset:</b> Valor constante sumado a la señal. (Para más información, pulsa <a href="#offset2">aquí</a>).
         </li>
     </ul>
 
@@ -148,32 +174,49 @@
         <li>
             <b id="frequency2">Frecuencia:</b> Número de veces que se repite un ciclo entero de la señal dentro de una unidad de tiempo. Medido en Hercios (Hz) es el número de veces que se repite un ciclo de la señal en 1 segundo.
 
-<table>
-                <tbody><tr>
-                    <td>
-                        <img alt="Ejemplo frecuencia" src="images/image6.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
-                    </td>
-                </tr>
-                <tr>
-                    <td>En este ejemplo la frecuencia es 2 Hz.
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img alt="Ejemplo frecuencia" src="images/image6.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            En este ejemplo la frecuencia es 2 Hz.
 
-</td>
-                </tr>
-            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </li>
         <li>
             <b id="phase2">Fase:</b> Desplazamiento del coseno. Se mide en radianes, siendo 2π radianes un ciclo completo de la señal.<table>
-                <tbody><tr>
-                    <td>
-                        <img alt="Ejemplo fase" src="images/image4.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
-                    </td>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img alt="Ejemplo fase" src="images/image4.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            En este ejemplo la señal está desplazada ¼ de ciclo, por lo que la fase es π/2 rad.
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+        <li>
+            <b id="offset2">Offset:</b> Valor constante sumado a la señal.
+            <table>
+                <tr>
+                    <td><img alt="Ejemplo de offset" src="images/offset_es.png" style="width: 587.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px;"></td>
                 </tr>
                 <tr>
-                    <td>En este ejemplo la señal está desplazada ¼ de ciclo, por lo que la fase es π/2 rad.
-
-</td>
+                    <td>En este ejemplo el offset es 0.5</td>
                 </tr>
-            </tbody></table>
+            </table>
         </li>
     </ul>
 
