@@ -1,17 +1,22 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="672262673" file="C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp\SignalVisualizer.prj" location="C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp" name="SignalVisualizer" preferred-package-location="C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp\SignalVisualizer\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
-    <param.appname>Signal Visualizer</param.appname>
-    <param.icon />
-    <param.icons />
+  <configuration build-checksum="647941020" file="C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp\SignalVisualizer.prj" location="C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp" name="SignalVisualizer" preferred-package-location="C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp\SignalVisualizer\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+    <param.appname>SignalVisualizer</param.appname>
+    <param.icon>${PROJECT_ROOT}\SignalVisualizer_resources\icon.ico</param.icon>
+    <param.icons>
+      <file>${PROJECT_ROOT}\SignalVisualizer_resources\icon_48.png</file>
+      <file>${PROJECT_ROOT}\SignalVisualizer_resources\icon_32.png</file>
+      <file>${PROJECT_ROOT}\SignalVisualizer_resources\icon_24.png</file>
+      <file>${PROJECT_ROOT}\SignalVisualizer_resources\icon_16.png</file>
+    </param.icons>
     <param.version>1.0</param.version>
-    <param.authnamewatermark />
-    <param.email />
+    <param.authnamewatermark>Eder del Blanco</param.authnamewatermark>
+    <param.email>ederdelblanco@gmail.com</param.email>
     <param.company>Aholab</param.company>
     <param.summary />
     <param.description />
-    <param.screenshot />
+    <param.screenshot>${PROJECT_ROOT}\SignalVisualizer_resources\SplashScreen.png</param.screenshot>
     <param.guid />
-    <param.installpath.string>\Aholab\Signal Visualizer\</param.installpath.string>
+    <param.installpath.string>\Aholab\SignalVisualizer\</param.installpath.string>
     <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
     <param.logo />
     <param.install.notes />
@@ -24,8 +29,8 @@
     <param.user.defined.mcr.options />
     <param.target.type>subtarget.standalone</param.target.type>
     <param.support.packages />
-    <param.web.mcr>false</param.web.mcr>
-    <param.package.mcr>true</param.package.mcr>
+    <param.web.mcr>true</param.web.mcr>
+    <param.package.mcr>false</param.package.mcr>
     <param.no.mcr>false</param.no.mcr>
     <param.web.mcr.name>MyAppInstaller_web</param.web.mcr.name>
     <param.package.mcr.name>MyAppInstaller_mcr</param.package.mcr.name>
@@ -43,14 +48,9 @@
 	 -?  print help on how to use the application 
 	 input arguments</param.help.text>
     <unset>
-      <param.icon />
-      <param.icons />
       <param.version />
-      <param.authnamewatermark />
-      <param.email />
       <param.summary />
       <param.description />
-      <param.screenshot />
       <param.guid />
       <param.installpath.string />
       <param.installpath.combo />
@@ -65,6 +65,8 @@
       <param.user.defined.mcr.options />
       <param.target.type />
       <param.support.packages />
+      <param.web.mcr />
+      <param.package.mcr />
       <param.no.mcr />
       <param.web.mcr.name />
       <param.package.mcr.name />
@@ -134,7 +136,7 @@
       <file>${PROJECT_ROOT}\zoomup.png</file>
     </fileset.depfun>
     <build-deliverables>
-      <file location="${PROJECT_ROOT}\SignalVisualizer\for_testing" name="Signal Visualizer.exe" optional="false">C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp\SignalVisualizer\for_testing\Signal Visualizer.exe</file>
+      <file location="${PROJECT_ROOT}\SignalVisualizer\for_testing" name="SignalVisualizer.exe" optional="false">C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp\SignalVisualizer\for_testing\SignalVisualizer.exe</file>
       <file location="${PROJECT_ROOT}\SignalVisualizer\for_testing" name="splash.png" optional="false">C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp\SignalVisualizer\for_testing\splash.png</file>
       <file location="${PROJECT_ROOT}\SignalVisualizer\for_testing" name="readme.txt" optional="true">C:\Users\Eder\Documents\MATLAB\SignalVisualizerApp\SignalVisualizer\for_testing\readme.txt</file>
     </build-deliverables>
